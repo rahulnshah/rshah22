@@ -1,0 +1,65 @@
+	
+#Main-Header h1{
+	font-family: Courier;
+	color : white;
+	text-align:center; 
+	}
+#Main-Header .child {
+    padding: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    
+    transition: all .5s;
+}
+.bg-five {
+	background-image: 
+url("../images/blurredfall.png");
+}
+
+#Main-Header .child:hover,
+#Main-Header .child:focus {
+    -ms-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+
+#myPosts .post{
+	
+  font-family: Arial Narrow, sans-serif;
+}
+.post_content{
+	
+  font-family: Arial Narrow, sans-serif;
+  line-height: 2;
+
+}
+.code{
+	line-height: 1.5;
+}
+a{
+	text-decoration: none;
+	
+}
+
+.button{
+	background-color: #333;
+	color: #fff;
+	padding: 10px 15px;
+	border: none;
+
+}
+
+.button:hover{
+	background: green;
+	color: DarkBlue;
+	
+}
+.whitespace{
+	color: white;
+}
+

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset = "UTF-8"> 
+	<meta name = "description" content = "This is an awesome website!">
+	<meta name = "author" content = "Rahul">
+	<meta name = "keywords" content = "dinosaur, page_1, page_2, T-rex">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		
+	<title>Rahul's blog posts</title>
+	<link rel= "stylesheet" type = "text/css" 
+	href="CSS/blog_style.css"> 
+	
+</head>
+
+<body>
+	
+		<header id= "Main-Header">
+			
+			  
+			<div class="child bg-five">
+			 <h1>Uncovering Python 3</h1>
+			</div>
+		  
+		</header>
+		<a href="index.html" >Go back to homepage</a>
+		<ul>
+			<li><a href="#set()">What is a set()?</a></li>
+			<li><a href="#deque">What is a deque()?</a></li>
+			<li><a href="#JSON">What is JSON?</a></li>
+		</ul>
+	<section id = "myPosts">
+	<span id = "set()">
+		<article class ="post">
+			<h3>What is a set()?</h3>
+			
+			<small>Posted by Rahul on 12/24/2020</small>
+			
+			<p class = "post_content">A set is a special data type in Python.  More specifically, it is an unordered list of elements enclosed by <code>{}</code>.  
+			A set cannot have duplicate elements and if it does only one will show.  In the following examples, I demostrated some common methods used 
+			with set operations.  I used the <code>add</code>, <code>update</code>, <code>remove</code> and <code>discard</code> methods in the following examples.
+			
+			<div class = "code">
+			<code>
+			<br>s1 = {54, 67, 88, 88}
+			</br>print(s1)  # {88, 67, 54}
+			<br># to create an empty set, use set() not {}
+			</br>s2 = set()
+			<br>s2.add(23)
+			</br>s2.add(34)
+			<br>s2.add(53)
+			</br>print(s2)  # {34, 53, 23} <-- not in the same order as they were added
+
+			<br># not the case with lists
+			</br>list_1 = []
+			<br>list_1.append(23)
+			</br>list_1.append(33)
+			<br>print(list_1)  # [23, 33]
+
+			</br>s3 = {5, 5, 8}
+			<br>s2.update(s3, [10, 11, 2])
+			</br><print(s2)  # {34, 2, 53, 5, 23, 8, 10, 11}; only one 5 got added in set s2
+
+			<br># remove value of 5, but not 6 because 6 is not in s2
+			</br>s2.remove(5)
+			<br>print(s2)
+			</br># s2.remove(6) # KeyError: 6
+			<br>s2.discard(6)  # works just fine
+			</br>print(s2)  # {34, 2, 53, 23, 8, 10, 11}
+
+			<br>set_1 = {25, 2, 1}
+			</br>set_2 = {25, 2, 99}
+			<br>set_3 = {25, 2, 1, 99}
+			</br>print(set_1.intersection(set_2, set_3))  # {25, 2} <-- common in all sets
+			<br>print(set_1.symmetric_difference(set_1))  # {} no values in set_1 that are not in itself
+			</br>print(set_1.symmetric_difference(set_2))  # 1 is not in set_2 and 99 is not in set_1
+
+			<br># final note: the 'in' operator of Python 3 works faster with a set() than a list(), so
+			</br># be sure to convert a list() into a set() first when doing a membership test.
+			</code>
+			</div>
+			<br></br><a class= "button" href= "https://youtu.be/r3R3h5ly_8g">Learn More</a>
+			</p>
+			
+		
+		</article>
+	</span>
+	<span id = "deque">
+		<article class="post">
+			<h3>What is a deque()?</h3>
+			
+			<small>Posted by Rahul on 12/24/2020</small>
+			<p class = "post_content">A <code>deque()</code> is another data structure in Python that closely resembles a list(),
+			but also has it own distinct characteristics.  'Deque' is a short-form for a "double-ended-queue" and 
+			the code below contains some common operations that one can perform on a <code>deque()</code> with methods as <code>append</code>, <code>extend</code>,
+			<code>pop</code>, and <code>rotate</code>. <code>pop</code>, <code>append</code>, and <code>extend</code> also work with a list object in Python.  
+			
+			
+			<div class ="code">
+			<code>
+			from collections import deque
+			<br># deque is a double-ended-queue
+			</br>d = deque()
+			<br>d.append(1)
+			</br>d.append(22)
+			<br>d.append(334)  # deque([1,22,334])
+			</br>print(d)
+			<br>d.appendleft(334)  # add 334 to the leftMost side: deque([334,1,22,334])
+			</br>print(d)
+			<br>d.popleft()
+			</br>print(d)  # and we're back to square one: deque([1,22,334])
+			<br>d.extend([4, 5, 99])  # add all elements of list to right side of d
+			</br>d.extendleft([4, 5, 55])  # add to the left of the d in this order: 55,5,4..
+			<br>print(d)  # d([55, 5, 4, 1, 22, 334, 4, 5, 99])
+			</br>d.rotate(-3)  # move everything in d 3 places to the left
+			<br>print(d)  # deque([1, 22, 334, 4, 5, 99, 55, 5, 4])</br>
+			</code>
+			</div>
+			<br></br><a class= "button" href= "https://bradfieldcs.com/algos/deques/introduction/">Learn More</a>
+			</p>
+		</article>
+	</span>
+		
+		
+		<span id = "JSON">
+			<article class="post">
+			<h3>What is JSON?</h3>
+			
+			<small>Posted by Rahul on 12/26/2020</small>
+			<p class = "post_content">JSON stands for  JavaScript Object Notation.  
+			It is a very common data format similar to what we put in text files.
+			You do not need to get intimidated by the word "Javascript" in it
+			because all programming languages these days are equipped with libraries that
+			parse and generate JSON files.  In Python 3, the <code>jason</code> library comes with Python's standard library.  
+			I have attached an example of what a json file looks like below.  
+			<!--<br></br><input type='file' name='C:\Users\rahul\PycharmProjects\learningPython\people.json'>-->
+			Looking at a first glance, a Python enthusiast like myself can recognize 
+			some elements of Python that are embedded into this json file.  I see a dictionary inside which is a key <code>"people"</code> whose value is
+			a list of dictionaries, although the format is syntatically similar to the code for creating two JavaScript objects.
+			Now there are some simple tasks that we can do with this json file.  I can convert this json data into a python object and to do 
+			that, I will use a context manager: <code>with open("people.json") as f:</code>.  What this statement does is that it opens <code>people.json</code>
+			and then I can store its information in <var>data_1</var> as such:
+			<div class ="code">
+			<code>
+			with open("people.json") as f:
+				<br></br><b class = "whitespace">add a tab</b>data_1 = json.load(f)
+			<br></br># json.load() - loads a file into a python obj
+			<br></br># jason.loads() - loads a string into a python obj # same rule of thumb applies for jason.dump()/dumps(), but you have to open(fiename, 'w') as f: and not open 
+			<br></br> # the file with 'r' as a second argument in the <code>with open</code> context manager.
+			<br></br># which is used to copy exisiting json data or modified jason data and "dump" into a new file 
+			
+			<p>I can now treat <var>data_1</var> as a Python dictionary.</p>
+			people_names = []  # will become ["John Smith","Jane Doe"] after the following execution
+			<br></br>for d in data_1["people"]:
+			<br></br><b class = "whitespace">add a tab</b>people_names.append(d["names"])
+			<br></br># json.load() - loads a file into a python obj
+			<br></br># jason.loads() - loads a string into a python obj # same rule of thumbe applies for jason.dump()/dumps()
+			<br></br># which is used to copy existing json data or modified jason data and "dump" into a new file 
+			</code>
+			</div>
+			
+			<br></br><a class= "button" href= "https://www.geeksforgeeks.org/json-dump-in-python/#:~:text=The%20dump()%20method%20is,be%20stored%20as%20an%20argument.">Learn More</a>
+			</p>
+		</article>
+	</span>
+	</section>
+	
+	<!--Set Blog post categories-->
+	
+	
+	<footer id= "Main-Footer">
+		<p>Copyright &copy; 2020, Uncovering Python 3</p>
+	</footer>
+
+</body>
+
+</html>
