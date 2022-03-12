@@ -4,9 +4,6 @@
 	<title>Rahul Shah</title>
 	<link rel= "stylesheet" type = "text/css" 
 	href="CSS/style.css"> 
-	
-	
-	
 </head>
 <body>
 	<header id= "main-header">
