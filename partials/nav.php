@@ -1,3 +1,4 @@
+<?php //This the navigation bar ?>
 <nav id= "navbar">
 		<div class= "container" >
 			<ul>
