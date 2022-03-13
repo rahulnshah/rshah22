@@ -1,0 +1,94 @@
+{
+    "basics": {
+      "email": "rahulnshah24@gmail.com",
+      "phone": "(862) 224-6094",
+      "url": "https://github.com/rahulnshah",
+      "profiles": [{
+        "network": "Linkedin",
+        "url": "https://www.linkedin.com/in/rahulnshah/"
+      }]
+    },
+    "experience": [{
+      "name": "Company 1",
+      "position": "President",
+      "url": "https://company.com",
+      "startDate": "2013-01-01",
+      "endDate": "2014-01-01",
+      "highlights": [
+        "Started the company"
+      ]
+    },
+    {
+      "name": "Company 2",
+      "position": "President",
+      "url": "https://company.com",
+      "startDate": "2013-01-01",
+      "endDate": "2014-01-01",
+      "highlights": [
+        "Started the company"
+      ]
+    },
+    {
+      "name": "Company 3",
+      "position": "President",
+      "url": "https://company.com",
+      "startDate": "2013-01-01",
+      "endDate": "2014-01-01",
+      "highlights": [
+        "Started the company"
+      ]
+    }],
+    "education": [{
+      "institution": "University",
+      "url": "https://institution.com/",
+      "area": "Software Development",
+      "studyType": "Bachelor",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01",
+      "score": "4.0",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]
+    }],
+    "awards": [{
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }],
+    "skills": [{"development":[
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python",
+        "Java",
+        "PHP",
+        "Django",
+        "SQL",
+        "MySQL",
+        "Ajax",
+        "Bootstrap",
+        "jQuery",
+        "Microsoft Excel",
+        "MATLAB",
+        "MS Visual Basic"
+      ]},
+      {"environments":[
+        "Windows",
+        "Git",
+        "Github"
+      ]}
+    ],
+    "languages": [{
+      "language": "English 1",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English 2",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English 3",
+      "fluency": "Native speaker"
+    }]
+  }

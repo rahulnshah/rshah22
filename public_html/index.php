@@ -37,7 +37,18 @@
 			<img src="images/myPic.jpg" alt="Open Google Chrome to see my profile picture.  Thank you">
 		</aside>
 	</div>
-	
+	<header>
+
+	</header>
+
+	<section>
+
+	</section>
+
+	<script>
+
+	</script>
+
 	<footer id = "main-footer">
 		<p>Built by Rahul Shah<br><a href= "https://github.com/bchiang7/v4" style="color:white; text-decoration: none">Inspired by Brittany Chiang</a></p>
 	</footer>
