@@ -12,7 +12,7 @@
 		</div>
 	</header>
 	<!--add require statement -->
-	<?php require("partials/nav.php"); ?>
+	<?php require("../partials/nav.php"); ?>
 	<section id = "showcase">
 		<div class = "container">
 			<h1>HI, I'M RAHUL</h1>

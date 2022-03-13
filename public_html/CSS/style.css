@@ -1,0 +1,360 @@
+/* Portfolio Website*/
+body{
+	
+	background-color: CadetBlue;
+	
+	
+	font: normal 16px Impact, Charcoal, sans-serif;
+	
+	line-height: 1.6em;
+	
+	
+	margin: 0;
+	
+	
+}
+.container{
+	width: 80%;
+	margin: auto; 
+	overflow: hidden;
+
+}
+.container p{
+	
+	font-family: "Times New Roman", Times, sans-serif;
+	
+	
+}
+.container_2{
+	position:absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 600px;
+	padding: 30px;
+	background:#fff; 
+	box-sizing: border-box;
+	border-radius: 10px;
+	box-shadow: 0 15px 15px rgba(0,0,0,.2);
+	
+}
+.container_2 h1{
+	
+	font-family: Georgia
+	
+}
+.circle
+{
+	width: 200px;
+	height: 200px;
+	background: url('../images/UncircledMountain.jpg');
+	border-radius: 50%;
+	border: dotted;
+	float: left;
+	shape-outside: circle();
+	margin: 60px 30px 30px 0;
+	
+}
+.container_2 p{
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+	line-height: 22px;
+	font-family:  "Times New Roman", Times, sans-serif;
+}
+/* Project/Research */
+
+
+@media(min-width:768px){
+	.container-1{
+	/*put the boxes side by side*/
+	display:flex;
+	justify-content:space-around;
+	}	
+}
+ 
+.container-1 div{
+	margin-top:50px;
+}
+
+.container-1-box{
+	
+	flex-basis: 25%;
+	background-color: DarkSlateGray;
+	
+	border:1px solid;
+	border-radius: 25px;
+	border-color: #ccc;
+    padding:10px;
+	-webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+.container-1-box h3{
+	font-family: "Times New Roman";
+	font-size: 15;
+	color: white;
+}
+.container-1-box p{
+	font-family: "Times New Roman";
+	font-size: 12;
+	color: white;
+}
+.container-1-box:hover {
+    -ms-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+	
+}
+
+.container-1-box img{
+	
+	max-width:100%;
+	border:2px #64ffda solid;
+	border-radius: 5px;
+	
+}
+.container-1-box figcaption{
+  align-self: flex-center;
+  
+}
+.button{
+	background: DodgerBlue;
+	color: AliceBlue;
+	padding: 10px 15px;
+	border: none;
+	margin-left:1em;
+
+}
+.container-1-box a{
+	font-family: "Times New Roman";
+	text-decoration: none;
+}
+
+
+/*other pages*/
+#main-header{
+	
+	background-color: coral;
+	color: black
+	
+}
+#navbar{
+	
+	background-color: #333;
+	color: #fff;
+}
+#navbar ul{
+	
+	padding: 0;
+	list-style: none;
+	
+}
+#navbar li{
+	
+	display:inline;
+	
+}
+#navbar a{
+	
+	color: #fff;
+	text-decoration:none;
+	font-size:18px;
+	padding-right: 15px;
+	
+}
+#navbar a:hover{
+	
+	color: coral;
+	
+}
+
+
+#showcase{
+	
+	
+	padding: 25px;
+	background-image:  url('../images/sunrise1_cs.jpg');
+	background-position: center;
+	
+	background-repeat: no-repeat;
+	
+	height: 300px;
+	margin-bottom: 30px;
+	text-align: center;
+	
+}
+
+#showcase h1{
+	color: #fff;
+	font-size: 50px;
+	line-height: 1.6em;
+	padding-top: 30px;	
+}
+
+#main{
+	float: right;
+	width: 70%;
+	color: #fff;
+	padding: 0 30px;
+	box-sizing: border-box;
+}
+#sidebar img{
+	-webkit-animation: fadein 2s;
+	float:left;
+	width:30%;
+	color: #fff;
+	
+	padding: 10px;
+	box-sizing: border-box;
+	
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+#main-footer{
+	background: #333;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+	
+}
+#main-footer p{
+	font-family: "Times New Roman", Times, sans-serif;
+	
+}
+@media(max-width:600px){
+	#main{
+		width: 100%;
+		float:none;
+	}
+	#sidebar{
+		width: 100%;
+		float:none;
+	}
+}
+
+.timeline{
+	
+	position: relative;
+	margin: 50px auto;
+	padding: 40px 0;
+	width: 1000px;
+}
+.timeline:before
+{
+	content: '';
+	position: absolute;
+	left: 50%;
+	width: 2px;
+	height: 1000px;
+	background: darkblue;
+	
+}
+
+.timeline ul
+{
+	
+	margin: 0;
+	padding: 0;
+
+}
+.timeline ul li{
+	
+	list-style:none;
+	position:relative;
+	width: 50%;
+	padding: 20px 40px;
+	box-sizing:border-box;
+	
+}
+.timeline ul li:nth-child(odd){
+	
+	float: left;
+	text-align: right;
+	clear: both;
+	
+}
+.timeline ul li:nth-child(even){
+	
+	float: right;
+	text-align: left;
+	clear:both;
+}
+.content{
+	
+	padding-bottom: 20px;
+	
+}
+.timeline ul li:nth-child(odd):before{
+	
+	content: '';
+	position: absolute;
+	top : 24px;
+	right: -6px;
+	width: 10px;
+	height: 10px;
+	background: rgba(233, 33,99,1);
+	border-radius: 50%;
+	box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
+}
+.timeline ul li:nth-child(even):before{
+	
+	content: " ";
+	position: absolute;
+	top : 24px;
+	left: -4px;
+	width: 10px;
+	height: 10px;
+	background: rgba(233, 33,99,1);
+	border-radius: 50%;
+	box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
+}
+.timeline ul li h3{
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+	color: coral;
+	
+}
+.timeline ul li p{
+	margin: 10px 0 0;
+	padding: 0;
+
+	
+}
+.timeline ul li .time h4{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	
+}
+.timeline ul li:nth-child(odd) .time{
+	
+	position: absolute;
+	top: 12px;
+	right: -165px;
+	margin: 0;
+	padding: 8px 16px;
+	background: rgba(233, 33,99,1);
+	color: #fff;
+	border-radius: 18px;
+	box-shadow: 0 0 0 3px rgba(233, 33,99,0.3);
+}
+.timeline ul li:nth-child(even) .time{
+	
+	position: absolute;
+	top: 12px;
+	left: -165px;
+	margin: 0;
+	padding: 8px 16px;
+	background: rgba(233, 33,99,1);
+	color: #fff;
+	border-radius: 18px;
+	box-shadow: 0 0 0 3px rgba(233, 33,99,0.3);
+}
+

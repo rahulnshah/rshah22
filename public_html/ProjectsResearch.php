@@ -14,7 +14,7 @@
 			<h1>Projects</h1>
 		</div>
 	</header>
-	<?php require("partials/nav.php"); ?>
+	<?php require("../partials/nav.php"); ?>
 <div class="container-1">
   <div class="container-1-box">
     <h3>Automation With Openpyxl</h3>
