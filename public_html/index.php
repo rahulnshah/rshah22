@@ -34,17 +34,17 @@
 				"Hello!", you can reach me at <a href="mailto:rahulnshah24@gmail.com" style="color:white; text-decoration: underline;">rahulnshah24@gmail.com</a>.</p>
 		</section>
 		<aside id= "sidebar">
-			<img src="images/myPic.jpg" alt="Open Google Chrome to see my profile picture.  Thank you">
+			<img src="images/myPic.jpg" alt="Open Google Chrome to see my profile picture. Thank you">
 		</aside>
 	</div>
-	<header>
+	
+		<header>
+			<h1>Hello</h1>
+		</header>
 
-	</header>
+		<section>
 
-	<section>
-
-	</section>
-
+		</section>
 	<script>
 
 	</script>
