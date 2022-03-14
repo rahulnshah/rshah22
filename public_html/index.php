@@ -46,7 +46,15 @@
 
 		</section>
 	<script>
+		const fetchPromise = fetch('https://rahulnshah.herokuapp.com/json/rs_resume.json');
 
+		fetchPromise
+		.then( response => {
+			return response.json();
+		})
+		.then( json => {
+			console.log(json.basics.email);
+		});
 	</script>
 
 	<footer id = "main-footer">
