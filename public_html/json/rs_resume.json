@@ -2,11 +2,11 @@
     "basics": {
       "email": "rahulnshah24@gmail.com",
       "phone": "(862) 224-6094",
-      "url": "https://github.com/rahulnshah",
-      "profiles": [{
-        "network": "Linkedin",
-        "url": "https://www.linkedin.com/in/rahulnshah/"
-      }]
+      "url": "https://github.com/rahulnshah"
+    },
+    "profiles": {
+      "network": "Linkedin",
+      "url": "https://www.linkedin.com/in/rahulnshah/"
     },
     "experience": [{
       "name": "Company 1",

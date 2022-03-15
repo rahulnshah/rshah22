@@ -39,6 +39,12 @@
 	</div>
 	<div class="col-md-12 text-center">
 		<button type="button" class="btn btn-dark">Show Resume</button>
+		<button type="button" class="btn btn-primary">Create Card</button>
+	</div>
+	<div class="container-fluid">
+		<div class="row row-cols-1 row-cols-md-5 g-4">
+
+		</div>
 	</div>
 		<header>
 			
@@ -47,9 +53,9 @@
 		<section>
 
 		</section>
-		<footer id = "main-footer">
+		<!-- <footer id = "main-footer">
 			<p class="text-center">Built by Rahul Shah<br><a href= "https://github.com/bchiang7/v4" class="text-decoration-none">Inspired by Brittany Chiang</a></p>
-		</footer>
+		</footer> -->
 	<script>
 		function getJSONString(json)
 		{
@@ -77,6 +83,29 @@
 		$(document).ready(function(){
   			$(".btn-dark").click(function(){
 				  showResume();
+  			});
+
+			$(".btn-primary").click(function(){
+				// creates a bootstrap card 
+				let myFlash = document.getElementsByClassName("row-cols-1")[0];
+				let cardDiv = document.createElement("div");
+				cardDiv.className = "card border-dark";
+				let cardBody1 = document.createElement("div");
+				let h5tag = document.createElement("h5");
+				let para = document.createElement("p");
+				h5tag.className = "card-title";
+				para.className = "card-text";
+				h5tag.innerText = "Title";
+				para.innerText = "paragraph";
+				cardBody1.className = "card-body text-dark";
+				cardBody1.appendChild(h5tag);
+				cardBody1.appendChild(para);
+				cardDiv.appendChild(cardBody1);
+				let colDiv = document.createElement("div");
+				colDiv.className = "col";
+				colDiv.appendChild(cardDiv);
+				myFlash.appendChild(colDiv);
+
   			});
 		});
 	</script>
