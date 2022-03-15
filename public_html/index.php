@@ -2,25 +2,25 @@
 <html>
 <head>
 	<title>Rahul Shah</title>
-	<link rel= "stylesheet" type = "text/css" href="CSS/style.css"> 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<!-- <link rel= "stylesheet" type = "text/css" href="CSS/style.css">  -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-	<header id= "main-header">
+	<!-- <header id= "main-header">
 		<div class= "container" >
 			<h1>Home</h1>
 		</div>
-	</header>
+	</header> -->
 	<!--add require statement -->
 	<?php require("../partials/nav.php"); ?>
-	<section id = "showcase">
-		<div class = "container">
-			<h1>HI, I'M RAHUL</h1>
-			<p style="color:white;" ><a href = "https://github.com/rahulnshah" target="_blank" style="color:white; text-decoration: none;">GitHub</a> | 
-			<a href = "http://linkedin.com/in/rahulnshah" target="_blank" style="color:white; text-decoration: none;">LinkedIn</a></p>
-		</div>
-		
-	</section>
+	<figure class="text-center">
+		<blockquote class="blockquote">
+		<p class="h1">Hi, I am Rahul</p>
+		</blockquote>
+		<p class="text-center">Software Engineer, Leetcoder, Open Source Contributer</p>
+	</figure>
 	<div class= "container">
 		<section id = "main">
 				<h1>Welcome!</h1>
@@ -33,23 +33,28 @@
 				<p>If you have any questions or any suggestions about movies, games, or just want to say a friendly
 				"Hello!", you can reach me at <a href="mailto:rahulnshah24@gmail.com" style="color:white; text-decoration: underline;">rahulnshah24@gmail.com</a>.</p>
 		</section>
-		<aside id= "sidebar">
+		<!-- <aside id= "sidebar">
 			<img src="images/myPic.jpg" alt="Open Google Chrome to see my profile picture. Thank you">
-		</aside>
+		</aside> -->
 	</div>
-		<button id="showResumeBtn">Show Resume</button>
+	<div class="col-md-12 text-center">
+		<button type="button" class="btn btn-dark">Show Resume</button>
+	</div>
 		<header>
-			<h1>Hello</h1>
+			
 		</header>
 
 		<section>
 
 		</section>
+		<footer id = "main-footer">
+			<p class="text-center">Built by Rahul Shah<br><a href= "https://github.com/bchiang7/v4" class="text-decoration-none">Inspired by Brittany Chiang</a></p>
+		</footer>
 	<script>
 		function getJSONString(json)
 		{
-			let str = JSON.stringify(json);
-			console.log(str);
+			// let str = JSON.stringify(json);
+			console.log("Hello");
 		}
 		function showResume()
 		{
@@ -70,14 +75,10 @@
 			});
 		}
 		$(document).ready(function(){
-  			$("#showResumeBtn").click(function(){
+  			$(".btn-dark").click(function(){
 				  showResume();
   			});
 		});
 	</script>
-
-	<footer id = "main-footer">
-		<p>Built by Rahul Shah<br><a href= "https://github.com/bchiang7/v4" style="color:white; text-decoration: none">Inspired by Brittany Chiang</a></p>
-	</footer>
 </body>
 </html>
