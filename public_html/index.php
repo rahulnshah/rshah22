@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Rahul Shah</title>
-	<link rel= "stylesheet" type = "text/css" 
-	href="CSS/style.css"> 
+	<link rel= "stylesheet" type = "text/css" href="CSS/style.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 	<header id= "main-header">
@@ -34,19 +34,46 @@
 				"Hello!", you can reach me at <a href="mailto:rahulnshah24@gmail.com" style="color:white; text-decoration: underline;">rahulnshah24@gmail.com</a>.</p>
 		</section>
 		<aside id= "sidebar">
-			<img src="images/myPic.jpg" alt="Open Google Chrome to see my profile picture.  Thank you">
+			<img src="images/myPic.jpg" alt="Open Google Chrome to see my profile picture. Thank you">
 		</aside>
 	</div>
-	<header>
+		<button id="showResumeBtn">Show Resume</button>
+		<header>
+			<h1>Hello</h1>
+		</header>
 
-	</header>
+		<section>
 
-	<section>
-
-	</section>
-
+		</section>
 	<script>
-
+		function getJSONString(json)
+		{
+			let str = JSON.stringify(json);
+			console.log(str);
+		}
+		function showResume()
+		{
+			const fetchPromise = fetch('json/rs_resume.json');
+			fetchPromise
+			.then( response => {
+				if (!response.ok) {
+				throw new Error(`HTTP error: ${response.status}`);
+				}
+				return response.json();
+			})
+			.then( json => {
+				console.log("sending JSON...");
+				getJSONString(json);
+			})
+			.catch( error => {
+				console.log("error occured");
+			});
+		}
+		$(document).ready(function(){
+  			$("#showResumeBtn").click(function(){
+				  showResume();
+  			});
+		});
 	</script>
 
 	<footer id = "main-footer">
