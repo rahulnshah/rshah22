@@ -22,7 +22,6 @@
 		<p class="text-center">Software Engineer, Leetcoder, Open Source Contributer</p>
 	</figure>
 	<div class= "container">
-		<section id = "main">
 				<h1>Welcome!</h1>
 				<p>My name is Rahul Shah.  I am an undergraduate student at New Jersey 
 				Institute of Technology, where I am
@@ -32,10 +31,6 @@
 				feature some of my fun projects in this area of expertise.</p>
 				<p>If you have any questions or any suggestions about movies, games, or just want to say a friendly
 				"Hello!", you can reach me at <a href="mailto:rahulnshah24@gmail.com" style="color:white; text-decoration: underline;">rahulnshah24@gmail.com</a>.</p>
-		</section>
-		<!-- <aside id= "sidebar">
-			<img src="images/myPic.jpg" alt="Open Google Chrome to see my profile picture. Thank you">
-		</aside> -->
 	</div>
 	<div class="col-md-12 text-center">
 		<button type="button" class="btn btn-dark">Show Resume</button>
@@ -43,25 +38,98 @@
 	</div>
 	<div class="container-fluid">
 		<div class="row row-cols-1 row-cols-md-5 g-4">
-
 		</div>
 	</div>
-		<header>
-			
-		</header>
-
-		<section>
-
-		</section>
-		<!-- <footer id = "main-footer">
-			<p class="text-center">Built by Rahul Shah<br><a href= "https://github.com/bchiang7/v4" class="text-decoration-none">Inspired by Brittany Chiang</a></p>
-		</footer> -->
 	<script>
-		function getJSONString(json)
+		function showBasics(key, json)
 		{
-			// let str = JSON.stringify(json);
-			console.log("Hello");
+			//make a bootstrap card here, and for card text, just sepearte each key-val pair with \n in the p element
+			let myFlash = document.getElementsByClassName("row-cols-1")[0];
+				let cardDiv = document.createElement("div");
+				cardDiv.className = "card border-dark";
+				let cardBody1 = document.createElement("div");
+				let h5tag = document.createElement("h5");
+				let para = document.createElement("p");
+				h5tag.className = "card-title";
+				para.className = "card-text";
+				h5tag.innerText = key;
+				let arr = Object.keys(json[key]);
+				let emptyStr = "";
+				//run a for loop hrere 
+				for(let i = 0; i < arr.length; i++)
+				{
+					emptyStr = emptyStr + arr[i] + ": " + json[key][arr[i]] + "\n";
+				}
+				para.innerText = emptyStr;
+				cardBody1.className = "card-body text-dark";
+				cardBody1.appendChild(h5tag);
+				cardBody1.appendChild(para);
+				cardDiv.appendChild(cardBody1);
+				let colDiv = document.createElement("div");
+				colDiv.className = "col";
+				colDiv.appendChild(cardDiv);
+				myFlash.appendChild(colDiv);
 		}
+		function showSkills(key, json)
+		{        
+				let myFlash = document.getElementsByClassName("row-cols-1")[0];
+				let cardDiv = document.createElement("div");
+				cardDiv.className = "card border-dark";
+				let cardBody1 = document.createElement("div");
+				let h5tag = document.createElement("h5");
+				let para = document.createElement("p");
+				h5tag.className = "card-title";
+				para.className = "card-text";
+				//decided the inner text for each para and h5 tag, and the headerDiv text 
+				h5tag.innerText = key;
+				para.innerText = json[key].join(", ");
+				cardBody1.className = "card-body text-dark";
+				cardBody1.appendChild(h5tag);
+				cardBody1.appendChild(para);
+				cardDiv.appendChild(cardBody1);
+				let colDiv = document.createElement("div");
+				colDiv.className = "col";
+				colDiv.appendChild(cardDiv);
+				myFlash.appendChild(colDiv);
+		}
+		function showIt(key, key2, json){
+			//create the card 
+			//use the key param , get the array loop it and show 
+			let myFlash = document.getElementsByClassName("row-cols-1")[0];
+				let cardDiv = document.createElement("div");
+				cardDiv.className = "card border-dark";
+				let cardBody1 = document.createElement("div");
+				let h5tag = document.createElement("h5");
+				let para = document.createElement("p");
+				h5tag.className = "card-title";
+				para.className = "card-text";
+				h5tag.innerText = key;
+				// let arr = Object.keys(json[key]);
+				let emptyStr = "";
+				//run a for loop hrere 
+				for(let i = 0; i < json[key].length; i++)
+				{
+					emptyStr = emptyStr + json[key][i] + ": " + json[key2][i] + "\n";
+				}
+				para.innerText = emptyStr;
+				cardBody1.className = "card-body text-dark";
+				cardBody1.appendChild(h5tag);
+				cardBody1.appendChild(para);
+				cardDiv.appendChild(cardBody1);
+				let colDiv = document.createElement("div");
+				colDiv.className = "col";
+				colDiv.appendChild(cardDiv);
+				myFlash.appendChild(colDiv);
+			//console.log("TODO ", key);
+		}
+		function populateResume(json)
+		{
+			showBasics("basics",json);
+			showSkills("skills", json);
+			showIt("profiles", "url", json);
+			showIt("languages", "fluency",json);
+		}
+
 		function showResume()
 		{
 			const fetchPromise = fetch('json/rs_resume.json');
@@ -74,10 +142,10 @@
 			})
 			.then( json => {
 				console.log("sending JSON...");
-				getJSONString(json);
+				populateResume(json);
 			})
 			.catch( error => {
-				console.log("error occured");
+				console.log(error);
 			});
 		}
 		$(document).ready(function(){

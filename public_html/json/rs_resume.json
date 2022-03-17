@@ -1,13 +1,10 @@
 {
     "basics": {
       "email": "rahulnshah24@gmail.com",
-      "phone": "(862) 224-6094",
       "url": "https://github.com/rahulnshah"
     },
-    "profiles": {
-      "network": "Linkedin",
-      "url": "https://www.linkedin.com/in/rahulnshah/"
-    },
+    "profiles":["Linkedin"],
+    "url" : ["https://www.linkedin.com/in/rahulnshah/"],
     "experience": [{
       "name": "Company 1",
       "position": "President",
@@ -56,7 +53,7 @@
       "awarder": "Company",
       "summary": "There is no spoon."
     }],
-    "skills": [{"development":[
+    "skills": [
         "HTML",
         "CSS",
         "JavaScript",
@@ -71,24 +68,11 @@
         "jQuery",
         "Microsoft Excel",
         "MATLAB",
-        "MS Visual Basic"
-      ]},
-      {"environments":[
+        "MS Visual Basic",
         "Windows",
         "Git",
         "Github"
-      ]}
     ],
-    "languages": [{
-      "language": "English 1",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "English 2",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "English 3",
-      "fluency": "Native speaker"
-    }]
+    "languages": ["English 1", "English 1", "English 1"],
+    "fluency": ["Native","Native","Native"]
   }
