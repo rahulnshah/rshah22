@@ -3,8 +3,9 @@
       "email": "rahulnshah24@gmail.com",
       "url": "https://github.com/rahulnshah"
     },
-    "profiles":["Linkedin"],
-    "url" : ["https://www.linkedin.com/in/rahulnshah/"],
+    "profiles":[{"network": "Linkedin",
+                  "url": "https://www.linkedin.com/in/rahulnshah/"
+    }, {"network":"Google", "url":"https://google.com"}],
     "experience": [{
       "name": "Company 1",
       "position": "President",
@@ -73,6 +74,8 @@
         "Git",
         "Github"
     ],
-    "languages": ["English 1", "English 1", "English 1"],
-    "fluency": ["Native","Native","Native"]
+    "languages": [{"language":"English 1", "fluency":"Native"}, 
+      {"language":"English 1", "fluency":"Native"}, 
+      {"language":"English 1", "fluency":"Native"}
+    ]
   }

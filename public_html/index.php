@@ -19,7 +19,7 @@
 		<blockquote class="blockquote">
 		<p class="h1">Hi, I am Rahul</p>
 		</blockquote>
-		<p class="text-center">Software Engineer, Leetcoder, Open Source Contributer</p>
+		<p class="text-center">Software Engineer, Leetcoder, Open Source Enthusiast</p>
 	</figure>
 	<div class= "container">
 				<h1>Welcome!</h1>
@@ -34,9 +34,9 @@
 	</div>
 	<div class="col-md-12 text-center">
 		<button type="button" class="btn btn-dark">Show Resume</button>
-		<button type="button" class="btn btn-primary">Create Card</button>
 	</div>
-	<div class="container-fluid">
+	<br>
+	<div class="container">
 		<div class="row row-cols-1 row-cols-md-5 g-4">
 		</div>
 	</div>
@@ -92,57 +92,86 @@
 				colDiv.appendChild(cardDiv);
 				myFlash.appendChild(colDiv);
 		}
-		function showIt(key, key2, json){
-			//create the card 
-			//use the key param , get the array loop it and show 
-			let myFlash = document.getElementsByClassName("row-cols-1")[0];
-				let cardDiv = document.createElement("div");
+		function showThem(key, json)
+		{
+			//you have a list of objects
+			let myFlash = document.getElementsByClassName("row-cols-1")[0]; 
+			let cardDiv = document.createElement("div");
 				cardDiv.className = "card border-dark";
 				let cardBody1 = document.createElement("div");
 				let h5tag = document.createElement("h5");
-				let para = document.createElement("p");
 				h5tag.className = "card-title";
-				para.className = "card-text";
 				h5tag.innerText = key;
-				// let arr = Object.keys(json[key]);
-				let emptyStr = "";
-				//run a for loop hrere 
-				for(let i = 0; i < json[key].length; i++)
-				{
-					emptyStr = emptyStr + json[key][i] + ": " + json[key2][i] + "\n";
-				}
-				para.innerText = emptyStr;
 				cardBody1.className = "card-body text-dark";
 				cardBody1.appendChild(h5tag);
-				cardBody1.appendChild(para);
+				for(let i = 0; i < json[key].length; i++)
+				{
+					let emptyStr = "";
+					let arr = Object.keys(json[key][i]);
+					let para = document.createElement("p");
+					para.className = "card-text";
+					for(let j = 0; j < arr.length; j++)
+					{
+						let attachStr = Array.isArray(json[key][i][arr[j]]) ? json[key][i][arr[j]].join(" | ") : json[key][i][arr[j]];
+						emptyStr = emptyStr + arr[j] + ": " + attachStr + "\n";
+					}
+					para.innerText = emptyStr; 
+					cardBody1.appendChild(para);
+				}
 				cardDiv.appendChild(cardBody1);
 				let colDiv = document.createElement("div");
 				colDiv.className = "col";
 				colDiv.appendChild(cardDiv);
 				myFlash.appendChild(colDiv);
-			//console.log("TODO ", key);
 		}
 		function populateResume(json)
 		{
+			showThem("education",json);
+			showThem("experience",json);
 			showBasics("basics",json);
 			showSkills("skills", json);
-			showIt("profiles", "url", json);
-			showIt("languages", "fluency",json);
+			showThem("profiles", json);
+			showThem("languages",json);
+			showThem("awards", json);
 		}
-
-		function showResume()
+		function showResume(btn)
 		{
+			btn.disabled = true;
+			//make two more btns appear here 
 			const fetchPromise = fetch('json/rs_resume.json');
 			fetchPromise
 			.then( response => {
 				if (!response.ok) {
 				throw new Error(`HTTP error: ${response.status}`);
 				}
+				console.log("response status", response.status);
 				return response.json();
 			})
 			.then( json => {
-				console.log("sending JSON...");
+				console.log("json received!");
 				populateResume(json);
+				//create a hide and unhide butn 
+				let hideButton = document.createElement("button");
+				let unhideButton = document.createElement("button");
+				hideButton.innerText = "Hide Resume";
+				hideButton.type = "button";
+				unhideButton.type = "button";
+				unhideButton.innerText = "Unhide Resume";
+				hideButton.className = "btn btn-danger";
+				unhideButton.className = "btn btn-primary";
+				//append both two 
+				let btnDiv = document.querySelector(".col-md-12");
+				btnDiv.appendChild(hideButton);
+				btnDiv.appendChild(unhideButton);
+				//add event listeners 
+				hideButton.addEventListener("click",function()
+				{
+					document.querySelector(".row-cols-1").hidden = true;
+				});
+				unhideButton.addEventListener("click",function()
+				{
+					document.querySelector(".row-cols-1").hidden = false;
+				});
 			})
 			.catch( error => {
 				console.log(error);
@@ -150,30 +179,7 @@
 		}
 		$(document).ready(function(){
   			$(".btn-dark").click(function(){
-				  showResume();
-  			});
-
-			$(".btn-primary").click(function(){
-				// creates a bootstrap card 
-				let myFlash = document.getElementsByClassName("row-cols-1")[0];
-				let cardDiv = document.createElement("div");
-				cardDiv.className = "card border-dark";
-				let cardBody1 = document.createElement("div");
-				let h5tag = document.createElement("h5");
-				let para = document.createElement("p");
-				h5tag.className = "card-title";
-				para.className = "card-text";
-				h5tag.innerText = "Title";
-				para.innerText = "paragraph";
-				cardBody1.className = "card-body text-dark";
-				cardBody1.appendChild(h5tag);
-				cardBody1.appendChild(para);
-				cardDiv.appendChild(cardBody1);
-				let colDiv = document.createElement("div");
-				colDiv.className = "col";
-				colDiv.appendChild(cardDiv);
-				myFlash.appendChild(colDiv);
-
+				  showResume(this);
   			});
 		});
 	</script>
