@@ -136,7 +136,13 @@
 		}
 		function showResume(btn)
 		{
-			btn.disabled = true;
+			//btn.disabled = true;
+			//remove the event lister off of btn, this functon is alread y called so it will procedd as is 
+			btn.removeEventListener("click", showResume);
+			btn.addEventListener("click",function()
+				{
+					document.querySelector(".row-cols-1").hidden = false;
+				});
 			//make two more btns appear here 
 			const fetchPromise = fetch('json/rs_resume.json');
 			fetchPromise
@@ -152,26 +158,26 @@
 				populateResume(json);
 				//create a hide and unhide butn 
 				let hideButton = document.createElement("button");
-				let unhideButton = document.createElement("button");
+				//let unhideButton = document.createElement("button");
 				hideButton.innerText = "Hide Resume";
 				hideButton.type = "button";
-				unhideButton.type = "button";
-				unhideButton.innerText = "Unhide Resume";
+				// unhideButton.type = "button";
+				// unhideButton.innerText = "Unhide Resume";
 				hideButton.className = "btn btn-danger";
-				unhideButton.className = "btn btn-primary";
+				//unhideButton.className = "btn btn-primary";
 				//append both two 
 				let btnDiv = document.querySelector(".col-md-12");
 				btnDiv.appendChild(hideButton);
-				btnDiv.appendChild(unhideButton);
+				// btnDiv.appendChild(unhideButton);
 				//add event listeners 
 				hideButton.addEventListener("click",function()
 				{
 					document.querySelector(".row-cols-1").hidden = true;
 				});
-				unhideButton.addEventListener("click",function()
-				{
-					document.querySelector(".row-cols-1").hidden = false;
-				});
+				// unhideButton.addEventListener("click",function()
+				// {
+				// 	document.querySelector(".row-cols-1").hidden = false;
+				// });
 			})
 			.catch( error => {
 				console.log(error);
