@@ -7,52 +7,60 @@
                   "url": "https://www.linkedin.com/in/rahulnshah/"
     }, {"network":"Google", "url":"https://google.com"}],
     "experience": [{
-      "name": "Company 1",
-      "position": "President",
-      "url": "https://company.com",
+      "name": "New Jersey Institute of Technology",
+      "position": "Campus Center Student Associate",
       "startDate": "2013-01-01",
       "endDate": "2014-01-01",
       "highlights": [
-        "Started the company"
+        "Regularly responded to 10+ student inquiries at the Information Desk.",
+        "Channeled NJIT resources such as conference rooms and breakout rooms to students.",
+        "Oversaw adherence to COVID-19 guidelines in Campus Center and Central King Building."
+
       ]
     },
     {
-      "name": "Company 2",
-      "position": "President",
-      "url": "https://company.com",
+      "name": "Mathnasium",
+      "position": "Math Tutor",
       "startDate": "2013-01-01",
       "endDate": "2014-01-01",
       "highlights": [
-        "Started the company"
+        "Taught basic math concepts ranging from arithmetic to algebra to students ages K-12.",
+        "Assisted students with class assignments and gave one-on-one guidance to increase the rate of learning and growth.",
+        "Learned to tailor my teaching style to children of varying levels of competency."
       ]
     },
     {
-      "name": "Company 3",
-      "position": "President",
-      "url": "https://company.com",
+      "name": "Kohl’s",
+      "position": "Customer Service Associate",
       "startDate": "2013-01-01",
       "endDate": "2014-01-01",
       "highlights": [
-        "Started the company"
+        "Boosted customer satisfaction by 18% through suggesting best-fit shoes.",
+        "Increased efficiency of online order packing by grouping different components of each order."
       ]
     }],
     "education": [{
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
+      "institution": "New Jersey Institute of Technology",
+      "url": "https://www.njit.edu/",
+      "degree": "Bachelor of Science in Computer Science",
+      "startDate": "2020-01-01",
       "endDate": "2013-01-01",
-      "score": "4.0",
+      "gpa": "3.9",
       "courses": [
-        "DB1101 - Basic SQL"
+        "Internet Applications",
+        "Intro to Computer Science II (Data Structures and Algorithms)",
+        "Introduction To Computer Science 1 (Java)",
+        "Introduction to Networking Technology",
+        "Linear Algebra",
+        "Probability and Statistics ",
+        "Roadmap To Computing (Python)"
       ]
     }],
     "awards": [{
-      "title": "Award",
+      "title": "AP Scholar with Honor",
       "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
+      "awarder": "College Board",
+      "summary": "Granted to students who receive an average score of at least 3.25 on all AP Exams taken, and scores of 3 or higher on four or more of these exams."
     }],
     "skills": [
         "HTML",
@@ -74,8 +82,8 @@
         "Git",
         "Github"
     ],
-    "languages": [{"language":"English 1", "fluency":"Native"}, 
-      {"language":"English 1", "fluency":"Native"}, 
-      {"language":"English 1", "fluency":"Native"}
+    "languages": [{"language":"English", "fluency":"Excellent"}, 
+      {"language":"Gujarati", "fluency":"Native"}, 
+      {"language":"Hindi", "fluency":"Excellent"}
     ]
   }
