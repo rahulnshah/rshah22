@@ -9,8 +9,8 @@
     "experience": [{
       "name": "New Jersey Institute of Technology",
       "position": "Campus Center Student Associate",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
+      "startDate": "09\\01\\2020",
+      "endDate": "05\\26\\2024",
       "highlights": [
         "Regularly responded to 10+ student inquiries at the Information Desk.",
         "Channeled NJIT resources such as conference rooms and breakout rooms to students.",
@@ -21,8 +21,8 @@
     {
       "name": "Mathnasium",
       "position": "Math Tutor",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
+      "startDate": "05\\01\\2020",
+      "endDate": "05\\31\\2020",
       "highlights": [
         "Taught basic math concepts ranging from arithmetic to algebra to students ages K-12.",
         "Assisted students with class assignments and gave one-on-one guidance to increase the rate of learning and growth.",
@@ -32,8 +32,8 @@
     {
       "name": "Kohl’s",
       "position": "Customer Service Associate",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
+      "startDate": "05\\26\\2021",
+      "endDate": "08\\29\\2021",
       "highlights": [
         "Boosted customer satisfaction by 18% through suggesting best-fit shoes.",
         "Increased efficiency of online order packing by grouping different components of each order."
@@ -43,8 +43,8 @@
       "institution": "New Jersey Institute of Technology",
       "url": "https://www.njit.edu/",
       "degree": "Bachelor of Science in Computer Science",
-      "startDate": "2020-01-01",
-      "endDate": "2013-01-01",
+      "startDate": "10\\01\\2020",
+      "endDate": "01\\01\\2021",
       "gpa": "3.9",
       "courses": [
         "Internet Applications",
@@ -58,7 +58,7 @@
     }],
     "awards": [{
       "title": "AP Scholar with Honor",
-      "date": "2014-11-01",
+      "date": "08\\29\\2020",
       "awarder": "College Board",
       "summary": "Granted to students who receive an average score of at least 3.25 on all AP Exams taken, and scores of 3 or higher on four or more of these exams."
     }],
