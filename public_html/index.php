@@ -122,7 +122,7 @@
 					para.className = "card-text";
 					for(let j = 0; j < arr.length; j++)
 					{
-						let attachStr = Array.isArray(json[key][i][arr[j]]) ? json[key][i][arr[j]].join(` &#9679; `) : json[key][i][arr[j]];
+						let attachStr = Array.isArray(json[key][i][arr[j]]) ? `<br>&#8226; ` + json[key][i][arr[j]].join(`<br>&#8226; `) : json[key][i][arr[j]];
 						if(!Array.isArray(json[key][i][arr[j]]) && json[key][i][arr[j]].length >= 5 && json[key][i][arr[j]].substring(0,5) === "https")
 						{
 							//creat andcor tage, innHTML = attachStr 
