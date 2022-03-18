@@ -37,14 +37,14 @@
 	</div>
 	<br>
 	<div class="container">
-		<div class="row row-cols-1 row-cols-md-5 g-4">
+		<div class="row md-5 g-4">
 		</div>
 	</div>
 	<script>
 		function showBasics(key, json)
 		{
 			//make a bootstrap card here, and for card text, just sepearte each key-val pair with \n in the p element
-			let myFlash = document.getElementsByClassName("row-cols-1")[0];
+			let myFlash = document.getElementsByClassName("row")[0];
 				let cardDiv = document.createElement("div");
 				cardDiv.className = "card border-dark";
 				let cardBody1 = document.createElement("div");
@@ -52,27 +52,37 @@
 				let para = document.createElement("p");
 				h5tag.className = "card-title";
 				para.className = "card-text";
-				h5tag.innerText = key;
+				h5tag.innerText = key.toUpperCase().substring(0,1) + key.substring(1);
 				let arr = Object.keys(json[key]);
 				let emptyStr = "";
 				//run a for loop hrere 
 				for(let i = 0; i < arr.length; i++)
 				{
-					emptyStr = emptyStr + arr[i] + ": " + json[key][arr[i]] + "\n";
+					let attachStr = json[key][arr[i]];
+					if(attachStr.length >= 5 && attachStr.substring(0,5) === "https")
+						{
+							// //creat andcor tage, innHTML = attachStr 
+							// let anchorT = document.createElement("a");
+							// anchorT.href = attachStr;
+							// anchorT.innerText = attachStr;
+							// attachStr = anchorT;
+							attachStr = `<a href = ${attachStr}>${attachStr}</a>`;
+						}
+					emptyStr = emptyStr + "<b>" + arr[i].substring(0,1).toUpperCase()  + arr[i].substring(1) + "</b>" + ": " + attachStr + "<br>";
 				}
-				para.innerText = emptyStr;
+				para.innerHTML = emptyStr;
 				cardBody1.className = "card-body text-dark";
 				cardBody1.appendChild(h5tag);
 				cardBody1.appendChild(para);
 				cardDiv.appendChild(cardBody1);
 				let colDiv = document.createElement("div");
-				colDiv.className = "col";
+				colDiv.className = "col-6";
 				colDiv.appendChild(cardDiv);
 				myFlash.appendChild(colDiv);
 		}
 		function showSkills(key, json)
 		{        
-				let myFlash = document.getElementsByClassName("row-cols-1")[0];
+				let myFlash = document.getElementsByClassName("row")[0];
 				let cardDiv = document.createElement("div");
 				cardDiv.className = "card border-dark";
 				let cardBody1 = document.createElement("div");
@@ -81,27 +91,27 @@
 				h5tag.className = "card-title";
 				para.className = "card-text";
 				//decided the inner text for each para and h5 tag, and the headerDiv text 
-				h5tag.innerText = key;
+				h5tag.innerText = key.toUpperCase().substring(0,1) + key.substring(1);
 				para.innerText = json[key].join(", ");
 				cardBody1.className = "card-body text-dark";
 				cardBody1.appendChild(h5tag);
 				cardBody1.appendChild(para);
 				cardDiv.appendChild(cardBody1);
 				let colDiv = document.createElement("div");
-				colDiv.className = "col";
+				colDiv.className = "col-6";
 				colDiv.appendChild(cardDiv);
 				myFlash.appendChild(colDiv);
 		}
 		function showThem(key, json)
 		{
 			//you have a list of objects
-			let myFlash = document.getElementsByClassName("row-cols-1")[0]; 
+			let myFlash = document.getElementsByClassName("row")[0]; 
 			let cardDiv = document.createElement("div");
 				cardDiv.className = "card border-dark";
 				let cardBody1 = document.createElement("div");
 				let h5tag = document.createElement("h5");
 				h5tag.className = "card-title";
-				h5tag.innerText = key;
+				h5tag.innerText = key.toUpperCase().substring(0,1) + key.substring(1);
 				cardBody1.className = "card-body text-dark";
 				cardBody1.appendChild(h5tag);
 				for(let i = 0; i < json[key].length; i++)
@@ -112,15 +122,20 @@
 					para.className = "card-text";
 					for(let j = 0; j < arr.length; j++)
 					{
-						let attachStr = Array.isArray(json[key][i][arr[j]]) ? json[key][i][arr[j]].join(" | ") : json[key][i][arr[j]];
-						emptyStr = emptyStr + arr[j] + ": " + attachStr + "\n";
+						let attachStr = Array.isArray(json[key][i][arr[j]]) ? json[key][i][arr[j]].join(` &#9679; `) : json[key][i][arr[j]];
+						if(!Array.isArray(json[key][i][arr[j]]) && json[key][i][arr[j]].length >= 5 && json[key][i][arr[j]].substring(0,5) === "https")
+						{
+							//creat andcor tage, innHTML = attachStr 
+							attachStr = `<a href = ${attachStr}>${attachStr}</a>`;
+						}
+						emptyStr = emptyStr + "<b>" + arr[j].substring(0,1).toUpperCase() + arr[j].substring(1) + "</b>" + ": " + attachStr + "<br>";
 					}
-					para.innerText = emptyStr; 
+					para.innerHTML = emptyStr; 
 					cardBody1.appendChild(para);
 				}
 				cardDiv.appendChild(cardBody1);
 				let colDiv = document.createElement("div");
-				colDiv.className = "col";
+				colDiv.className = "col-6";
 				colDiv.appendChild(cardDiv);
 				myFlash.appendChild(colDiv);
 		}
@@ -134,60 +149,40 @@
 			showThem("languages",json);
 			showThem("awards", json);
 		}
-		function showResume(btn)
+		function showResume()
 		{
-			//btn.disabled = true;
-			//remove the event lister off of btn, this functon is alread y called so it will procedd as is 
-			btn.removeEventListener("click", showResume);
-			btn.addEventListener("click",function()
-				{
-					document.querySelector(".row-cols-1").hidden = false;
-				});
-			//make two more btns appear here 
+			document.querySelector(".btn-dark").removeEventListener("click", showResume);
+			document.querySelector(".btn-dark").addEventListener("click",function()
+			{
+				document.querySelector(".row").hidden = false;
+			});
 			const fetchPromise = fetch('json/rs_resume.json');
 			fetchPromise
 			.then( response => {
 				if (!response.ok) {
 				throw new Error(`HTTP error: ${response.status}`);
 				}
-				console.log("response status", response.status);
 				return response.json();
 			})
 			.then( json => {
 				console.log("json received!");
 				populateResume(json);
-				//create a hide and unhide butn 
 				let hideButton = document.createElement("button");
-				//let unhideButton = document.createElement("button");
 				hideButton.innerText = "Hide Resume";
 				hideButton.type = "button";
-				// unhideButton.type = "button";
-				// unhideButton.innerText = "Unhide Resume";
 				hideButton.className = "btn btn-danger";
-				//unhideButton.className = "btn btn-primary";
-				//append both two 
 				let btnDiv = document.querySelector(".col-md-12");
 				btnDiv.appendChild(hideButton);
-				// btnDiv.appendChild(unhideButton);
-				//add event listeners 
 				hideButton.addEventListener("click",function()
 				{
-					document.querySelector(".row-cols-1").hidden = true;
+					document.querySelector(".row").hidden = true;
 				});
-				// unhideButton.addEventListener("click",function()
-				// {
-				// 	document.querySelector(".row-cols-1").hidden = false;
-				// });
 			})
 			.catch( error => {
-				console.log(error);
+				console.log(`Could not get products: ${error}`);
 			});
 		}
-		$(document).ready(function(){
-  			$(".btn-dark").click(function(){
-				  showResume(this);
-  			});
-		});
+		document.querySelector(".btn-dark").addEventListener("click", showResume);
 	</script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     },
     "profiles":[{"network": "Linkedin",
                   "url": "https://www.linkedin.com/in/rahulnshah/"
-    }, {"network":"Google", "url":"https://google.com"}],
+    }],
     "experience": [{
       "name": "New Jersey Institute of Technology",
       "position": "Campus Center Student Associate",
