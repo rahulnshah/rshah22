@@ -10,7 +10,6 @@
         <a class="nav-link" aria-current="page" href="index.php">Home</a>
         <a class="nav-link" href="blog.html" target = "_blank">Blogs</a>
         <a class="nav-link" href="ProjectsResearch.php">Projects</a>
-        <a class="nav-link" href="images/Resume.pdf" target = "_blank">Resume</a>
       </div>
     </div>
   </div>
