@@ -30,7 +30,7 @@
 				analysis that could be achieved through programming.  I have created this website to 
 				feature some of my fun projects in this area of expertise.</p>
 				<p>If you have any questions or any suggestions about movies, games, or just want to say a friendly
-				"Hello!", you can reach me at <a href="mailto:rahulnshah24@gmail.com" style="color:white; text-decoration: underline;">rahulnshah24@gmail.com</a>.</p>
+				"Hello!", you can reach me at <a href="mailto:rahulnshah24@gmail.com">rahulnshah24@gmail.com</a>.</p>
 	</div>
 	<div class="col-md-12 text-center">
 		<button type="button" class="btn btn-dark">Show Resume</button>
