@@ -23,14 +23,12 @@
 	</figure>
 	<div class= "container">
 				<h1>Welcome!</h1>
-				<p>My name is Rahul Shah.  I am an undergraduate student at New Jersey 
-				Institute of Technology, where I am
-				pursuing a Bachelor of Science in Computer Science degree.  I enjoy building elegant software with computer 
-				programming and I am a strong believer in the power of automation and statistical 
-				analysis that could be achieved through programming.  I have created this website to 
-				feature some of my fun projects in this area of expertise.</p>
+				<p>My name is Rahul.  I am an undergraduate student at New Jersey Institute of Technology, where I am
+				pursuing a Bachelor of Science in Computer Science degree.  I enjoy building elegant software through 
+				programming.  Web Developement, Decentralized Applications (DApps), and Internet of Things (IoT) are things that excite me the most in the realm of Computer Science.  On this homepage, you can find links to my personal
+				projects and blog posts.</p>
 				<p>If you have any questions or any suggestions about movies, games, or just want to say a friendly
-				"Hello!", you can reach me at <a href="mailto:rahulnshah24@gmail.com">rahulnshah24@gmail.com</a>.</p>
+				"Hello!", you can reach me at <a class="text-decoration-none" href="mailto:rahulnshah24@gmail.com">rahulnshah24@gmail.com</a>.</p>
 	</div>
 	<div class="col-md-12 text-center">
 		<button type="button" class="btn btn-dark">Show Resume</button>
