@@ -1,6 +1,7 @@
 <?php //This the site footer ?>
+<div class="app-root">
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted fixed-bottom">
+<footer class="text-center text-lg-start text-dark bg-light fixed-bottom">
   <!-- Copyright -->
   <div class="text-center p-4">
     Copyright © 2022:
@@ -9,3 +10,4 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+</div>
