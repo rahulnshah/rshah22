@@ -57,6 +57,7 @@
 		Loading the data just for you.
 	</div>
 </div>
+<?php require("../partials/footer.php"); ?>
 <script>
     // or enable responsive functionality:
     GitHubCalendar(".calendar", "rahulnshah", { responsive: true, tooltips: true});
