@@ -14,6 +14,7 @@ https://user-images.githubusercontent.com/68120349/159078797-deb7c9bc-3aab-490d-
 ## March 2022 
 ### More To Do: 
 - ~~Add a footer~~
+- remove irrelevant CSS 
 - See what Data Structures and Algorithms can you use in your website (>= 2)
   - Possible Ideas for DS: Linkedlist to swtich back and forth within the project page, Stack
   - Possible Ideas for Algos: Euclidean Algorithm to find the GCD of two numbers
