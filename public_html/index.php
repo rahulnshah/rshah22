@@ -17,7 +17,7 @@
 	<?php require("../partials/nav.php"); ?>
 	<figure class="text-center">
 		<blockquote class="blockquote">
-		<p class="h1">Hi, I am Rahul</p>
+		<p class="h1">Hi. I'm Rahul</p>
 		</blockquote>
 		<p class="text-center">Software Engineer, Leetcoder, Open Source Enthusiast</p>
 	</figure>
