@@ -102,8 +102,8 @@
 					colDiv.appendChild(cardDiv);
 					myFlash.appendChild(colDiv);
 			};
-			//map key is json prop. and key is function 
 			const map1 = new Map();
+			//store the functions as value and property as key
 			for (const property in json) {
 				if(property === "skills")
 				{
@@ -164,6 +164,20 @@
 				document.querySelector(".btn-dark").innerText = "Hide Resume";
 				document.querySelector(".btn-dark").className = "btn btn-danger";
 				document.querySelector(".btn-danger").addEventListener("click", hideResume);
+				//put all prop. from json into allKeys in order
+				const allKeys = []; 
+				for (const property in json){
+					allKeys.push(property);
+				}
+				//fill in innerHTML here 
+				document.querySelector("#demo").innerText = "Loaded";
+				while(allKeys.length !== 0)
+				{
+					//pop from allKeys - Last In First Out behavior shown here 
+					document.querySelector("#demo").innerText += "..." + allKeys.pop();
+				}
+				//Loaded...languages......basics
+				setTimeout(function(){document.querySelector("#demo").innerText = "";}, 3000);
 			})
 			.catch( error => {
 				console.log(`Could not get products: ${error}`);

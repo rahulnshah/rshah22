@@ -4,6 +4,7 @@
 	<title>Rahul Shah</title>
 	<link rel= "stylesheet" type = "text/css" href="CSS/portfolio.css">  
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -35,10 +36,10 @@
 	</div>
 	<br>
 	<div class="container">
+		<p id="demo"></p>
 		<div class="row md-5 g-4">
 		</div>
 	</div>
-	<h2 id="demo"></h2>
 	<br>
 	<!--github contribution chart-->
 	<!-- Include the library. -->
@@ -55,7 +56,55 @@
 		Loading the data just for you.
 	</div>
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+<br>
+<div class= "container">
+	<h3 class="text-center">Data Structures I Used</h3>
+	<ul class="list-unstyled">
+		<ul>
+			<li><h4>Map</h4></li>
+			<pre>
+				<code class="language-javascript">
+					const showThem = function(key, json){...};
+					const showSkills = function(key, json){...};
+					const showBasics = 	function(key, json){...};
+					const map1 = new Map();
+					//store the functions as value and property as key
+					for (const property in json) {
+						...
+					}
+					//loop the map and call each key's function and call each function 
+					for (const property in json) {
+						map1.get(property)(property,json);
+					}
+				</code>
+			</pre>
+			<li><h4>Array</h4></li>
+			<pre>
+				<code class="language-javascript">
+					//put all prop. from json into allKeys in order
+					const allKeys = []; 
+					for (const property in json){
+						allKeys.push(property);
+					}
+				</code>
+			</pre>
+			<li><h4>Stack</h4></li>
+			<pre>
+				<code class="language-javascript">
+					//fill in innerHTML here 
+					document.querySelector("#demo").innerText = "Loaded";
+					while(allKeys.length !== 0)
+					{
+						//pop from allKeys - Last In First Out behavior shown here 
+						document.querySelector("#demo").innerText += "..." + allKeys.pop();
+					}
+					//Loaded...languages......basics
+				</code>
+			</pre>
+		</ul>
+	</ul>
+</div>
 <?php require("../partials/footer.php"); ?>
 <script>
     // or enable responsive functionality:
