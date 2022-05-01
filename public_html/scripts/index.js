@@ -1,7 +1,8 @@
-import {GitHubRepository} from './githubRepo';
+"use strict";
+import {GitHubRepository} from './githubRepo.js';
 let dummyCardName = "dummy head node";
 let dummyCardDescription = "A circular doubly linked list eliminates special cases for insertion and deletion";
-let dummyCardUrl = "nonexistent";
+let dummyCardUrl = "#";
 //dummy card 
 const dummyCard = new GitHubRepository(dummyCardName, dummyCardDescription, dummyCardUrl);
 //listHead references dummyCard; don't move it 
@@ -27,16 +28,20 @@ for (let i = 0; i < objarray.length; i++) {
 }
 curr.setNextRepository(listHead);
 listHead.setPreviousRepository(curr);
-curr.displayName(); //last object in objarr
-curr = curr.getNextRepository();
-curr.displayName(); //dummy Node
-curr = curr.getNextRepository();
-curr.displayName(); //first object in objarr
-curr = curr.getNextRepository();
-curr.displayName(); //last object in objarrs
-// let str1: string = "as";
-// let str2: string = str1;
-// str1 = "as1";
-// console.log(`str1: ${str1}`);
-// console.log(`str2: ${str2}`);
-/*Yes, you can do string desp = ""; string name = ""; string url = ""; then new GitHubRepo(desp, name, url) in a forloop*/ 
+curr.convertToCard();
+const nextBtn = document.createElement("button");
+const previousBtn = document.createElement("button"); 
+nextBtn.innerText = "See Next Project";
+previousBtn.innerText = "See Previous Project";
+nextBtn.className = "btn btn-primary";
+previousBtn.className = "btn btn-primary";
+nextBtn.addEventListener("click", function(){
+    curr = curr.getNextRepository();
+    curr.convertToCard();
+});
+previousBtn.addEventListener("click", function(){
+    curr = curr.getPreviousRepository();
+    curr.convertToCard();
+});
+document.getElementsByClassName("container")[0].appendChild(previousBtn);
+document.getElementsByClassName("container")[0].appendChild(nextBtn);

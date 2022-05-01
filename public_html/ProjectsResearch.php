@@ -18,51 +18,14 @@
 			<p class="h1">A Few of My Creations</p>
 		</blockquote>
 	</figure>
-<div class="container-fluid">
-	<div class="row row-cols-1 row-cols-md-5 g-4">
-		<div class="col">
-            <div class="card bg-light">
-				<img src="images/Openpyxl Mockup.png" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">Automation With Openpyxl</h5>
-					<p class="card-text">A Python script that uses OOP principles to plot data onto a specific chart.  Built with the Openpyxl library.</p>
-				</div>
-				<div class="card-body">
-				<a href="https://github.com/rshah33/dataRepresentationsWithPython.git" class="btn btn-primary">Open in GitHub</a>
-					<!-- <a href="#" class="card-link">Another link</a> -->
-				</div>
-			</div>
+<div class="container">
+		<div class="projects-section">
 		</div>
-
-		<div class="col">
-            <div class="card bg-light">
-				<img src="images/ShoppingList Mockup.png" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">Shopping List</h5>
-					<p class="card-text">A simple GUI app that keeps track of various items in a shopping list.  User can also email the list to its recipient with the click of a button.</p>
-				</div>
-				<div class="card-body">
-				<a href="https://github.com/rshah33/shoppingList.git" class="btn btn-primary">Open in GitHub</a>
-					<!-- <a href="#" class="card-link">Another link</a> -->
-				</div>   
-            </div>
-		</div>
-
-		<div class="col">
-            <div class="card bg-light">
-			<img src="images/Playlist Mockup.png" class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Sounds Playlist</h5>
-				<p class="card-text">A GUI app with playable sounds, built with Tkinter and Python.</p>
-			</div>
-			<div class="card-body">
-			<a href="https://github.com/rshah33/soundsPlaylist.git" class="btn btn-primary">Open in GitHub</a>
-				<!-- <a href="#" class="card-link">Another link</a> -->
-			</div>
-        </div>
-	</div>
+		<br>
 </div>
+
 <?php require("../partials/footer.php"); ?>
+<script type="module" src="scripts/index.js"></script>
 </body>
 
 </html>
