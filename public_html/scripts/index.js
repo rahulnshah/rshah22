@@ -5,7 +5,7 @@ function getRequest() {
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState === 4 && xhttp.status === 200) {
             let data = JSON.parse(this.responseText);
-            console.log(data); //this is json 
+            //console.log(data); //this is json 
             //console.log("received data", data); //comment this out - delete this line 
             let dummyCardName = "dummy head node";
             let dummyCardDescription = "A circular doubly linked list eliminates special cases for insertion and deletion";
@@ -48,11 +48,6 @@ function getRequest() {
             });
             document.getElementsByClassName("container")[0].appendChild(previousBtn);
             document.getElementsByClassName("container")[0].appendChild(nextBtn);
-        }
-        else
-        {
-            console.log("Hey, something went wrong.  Please check the status code below");
-            console.log(`Status: ${xhttp.status}`);
         }
     }
     xhttp.open("GET", "../showvars.php");
