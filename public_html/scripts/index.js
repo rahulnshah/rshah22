@@ -7,8 +7,8 @@ function getRequest() {
             let data = JSON.parse(this.responseText);
             //console.log(data); //this is json 
             //console.log("received data", data); //comment this out - delete this line 
-            let dummyCardName = "dummy head node";
-            let dummyCardDescription = "A circular doubly linked list eliminates special cases for insertion and deletion";
+            let dummyCardName = "Dummy Card";
+            let dummyCardDescription = "This is always present, even when the circular doubly linked list is empty. A circular doubly linked list eliminates special cases for insertion and deletion. Inserting into and deleting from the first or last position is the same as for any other position. It is only a matter of determining where to locate the curr reference in the list.";
             let dummyCardUrl = "#";
             const dummyCard = new GitHubRepository(dummyCardName, dummyCardDescription, dummyCardUrl);
             //listHead references dummyCard; don't move it 

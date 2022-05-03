@@ -104,6 +104,38 @@
 					//Loaded...languages......basics
 				</code>
 			</pre>
+			<li><h4>Circular Doubly Linked List</h4></li>
+			<pre>
+				<code class="language-javascript">
+				const listHead = dummyCard;
+				/*
+				another object called curr also references dummyCard; 
+				it will moving forward; can set it to reference listHead and it 
+				would mean the same thing
+				*/
+				let curr = dummyCard;
+				/*
+				loop data; data is JSON that is returned from calling the GitHub REST api endpoint; 
+				data is an array of JS objects. Each JS object stores details about
+				every repository in key-value pairs
+				*/
+				for (let repo of data) {
+					let name = repo.name;
+					let description = repo.description;
+					let url = repo.html_url;
+					//create a GitHubRepository object 
+					let aRepo = new GitHubRepository(name,description,url);
+					aRepo.setPreviousRepository(curr);
+					//curr refers to the dummy Card, which always present before loop runs
+					curr.setNextRepository(aRepo);
+					//move curr to reference the next GitHubRepository object in list
+					curr = curr.getNextRepository();
+				}
+				//close the doubly linked list
+				curr.setNextRepository(listHead);
+				listHead.setPreviousRepository(curr);
+				</code>
+			</pre>
 		</ul>
 	</ul>
 </div>
