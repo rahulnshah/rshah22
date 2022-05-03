@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Rahul Shah</title>
-	<link rel="shortcut icon" href="images/myPic.ico" type="image/x-icon">
+	<?php require("../partials/iconTag.php"); ?>
 	<link rel= "stylesheet" type = "text/css" href="CSS/portfolio.css">  
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css"/>
