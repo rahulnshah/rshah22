@@ -46,8 +46,8 @@ function getRequest() {
                 curr = curr.getPreviousRepository();
                 curr.convertToCard();
             });
-            document.getElementsByClassName("col-md-12")[0].appendChild(previousBtn);
-            document.getElementsByClassName("col-md-12")[0].appendChild(nextBtn);
+            document.getElementsByClassName("px-1")[0].appendChild(previousBtn);
+            document.getElementsByClassName("px-1")[0].appendChild(nextBtn);
         }
     }
     xhttp.open("GET", "../showvars.php");
