@@ -25,8 +25,8 @@
 		</div>
 </div>
 <br>
-<div class="col-md-12 text-center">
-	<div class="px-1">
+<div class="px-1">
+	<div class="col-md-12 text-center">
 	</div>
 </div>
 <?php require("../partials/footer.php"); ?>
