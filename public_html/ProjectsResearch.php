@@ -26,8 +26,6 @@
 </div>
 <br>
 <div class="col-md-12 text-center">
-	<div class="px-1">
-    </div>
 </div>
 <?php require("../partials/footer.php"); ?>
 <script type="module" src="scripts/index.js"></script>
