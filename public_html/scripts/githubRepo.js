@@ -1,5 +1,4 @@
 "use strict";
-//classes 
 export class GitHubRepository {
     constructor(repositoryName, repositoryDescription, repositoryUrl) {
         this.repositoryName = repositoryName;
