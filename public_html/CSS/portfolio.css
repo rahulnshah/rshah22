@@ -1,4 +1,5 @@
-.app-root {
+.app-root 
+{
 
 	min-height: 100%;
 	
@@ -9,8 +10,14 @@
 	padding-bottom: 100px; 
 	
 }
-	
-footer {
+.space
+{
+	width: 4px;
+	height: auto;
+	display: inline-block;
+}	
+footer 
+{
 	
 	position: absolute;
 	

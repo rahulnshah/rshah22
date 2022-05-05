@@ -9,7 +9,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $headers = array(
    "Accept: application/json",
    //hide this 
-   "Authorization: token " . getenv("myscriptvar"),
+   "Authorization: token " . "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",
    "User-Agent: rahulnshah",
 );
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);

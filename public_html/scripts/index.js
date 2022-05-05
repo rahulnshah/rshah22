@@ -46,7 +46,7 @@ function getRequest() {
                 curr = curr.getPreviousRepository();
                 curr.convertToCard();
             });
-            document.getElementsByClassName("col-md-12")[0].appendChild(previousBtn);
+            document.getElementsByClassName("col-md-12")[0].prepend(previousBtn);
             document.getElementsByClassName("col-md-12")[0].appendChild(nextBtn);
         }
     }
