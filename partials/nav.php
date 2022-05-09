@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link" aria-current="page" href="index.php">Home</a>
-        <a class="nav-link" href="blog.html" target = "_blank">Blogs</a>
+        <a class="nav-link" href="https://rahulshah22.pythonanywhere.com/" target = "_blank">Blogs</a>
         <a class="nav-link" href="ProjectsResearch.php">Projects</a>
       </div>
     </div>
