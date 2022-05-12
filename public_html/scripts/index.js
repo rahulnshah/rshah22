@@ -44,7 +44,7 @@ function getRequest() {
                 //reset count 0 1 2 3 0 1 2 3 
                 GitHubRepository.count = (GitHubRepository.count + 1) % totalCards;  //length of list of objects
                 curr.convertToCard();
-                document.getElementsByClassName("text-muted").innerText += `/${totalCards}`;
+                document.getElementsByClassName("text-muted")[0].innerText += `/${totalCards}`;
             });
             previousBtn.addEventListener("click", function(){
                 curr = curr.getPreviousRepository();
