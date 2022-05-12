@@ -50,7 +50,7 @@ function getRequest() {
                 curr = curr.getPreviousRepository();
                 GitHubRepository.count = GitHubRepository.count - 1 < 0 ? totalCards - 1 : (GitHubRepository.count - 1) % totalCards;  //length of list of objects
                 curr.convertToCard();
-                document.getElementsByClassName("text-muted").innerText += `/${totalCards}`;
+                document.getElementsByClassName("text-muted")[0].innerText += `/${totalCards}`;
             });
             document.getElementsByClassName("col-md-12")[0].prepend(previousBtn);
             document.getElementsByClassName("col-md-12")[0].appendChild(nextBtn);
