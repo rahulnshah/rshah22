@@ -32,6 +32,7 @@ function getRequest() {
             }
             curr.setNextRepository(listHead);
             listHead.setPreviousRepository(curr);
+            curr = curr.getNextRepository(); //listHead and curr now point to the Dummy Card
             const nextBtn = document.createElement("button");
             const previousBtn = document.createElement("button"); 
             nextBtn.innerText = "See Next Project";
