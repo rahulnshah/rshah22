@@ -38,13 +38,19 @@ function getRequest() {
             previousBtn.innerText = "See Previous Project";
             nextBtn.className = "btn btn-primary";
             previousBtn.className = "btn btn-primary";
+            let totalCards = data.length + 1;
             nextBtn.addEventListener("click", function(){
                 curr = curr.getNextRepository();
+                //reset count 0 1 2 3 0 1 2 3 
+                GitHubRepository.count = (GitHubRepository.count + 1) % totalCards;  //length of list of objects
                 curr.convertToCard();
+                document.getElementsByClassName("text-muted").innerText += `/${totalCards}`;
             });
             previousBtn.addEventListener("click", function(){
                 curr = curr.getPreviousRepository();
+                GitHubRepository.count = GitHubRepository.count - 1 < 0 ? totalCards - 1 : (GitHubRepository.count - 1) % totalCards;  //length of list of objects
                 curr.convertToCard();
+                document.getElementsByClassName("text-muted").innerText += `/${totalCards}`;
             });
             document.getElementsByClassName("col-md-12")[0].prepend(previousBtn);
             document.getElementsByClassName("col-md-12")[0].appendChild(nextBtn);

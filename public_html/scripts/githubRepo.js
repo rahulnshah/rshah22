@@ -1,5 +1,6 @@
 "use strict";
 export class GitHubRepository {
+    static count = 0;
     constructor(repositoryName, repositoryDescription, repositoryUrl) {
         this.repositoryName = repositoryName;
         this.repositoryUrl = repositoryUrl;
@@ -35,9 +36,6 @@ export class GitHubRepository {
         //write code to display the details of a repo on a bootstrap card 
         let projectDiv = document.getElementsByClassName("card")[0]; 
         projectDiv.innerHTML = `
-                                <div class="card-header">
-                                    Featured
-                                </div>
                                 <div class="card border-dark">
                                     <div class="card-body text-dark">
                                         <h5 class="card-title">${this.getRepoName()}</h5>
@@ -46,7 +44,7 @@ export class GitHubRepository {
                                     </div>
                                 </div>
                                 <div class="card-footer text-muted">
-                                    Featured
+                                    ${GitHubRepository.count + 1}
                                 </div>
                             `;
     }
