@@ -20,7 +20,7 @@
 		</blockquote>
 	</figure>
 <div class="container">
-		<div class="card text-center">
+		<div class="card mx-auto text-center">
 			<p>Loading My Projects...</p>
 		</div>
 </div>
