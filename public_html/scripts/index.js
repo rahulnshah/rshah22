@@ -5,6 +5,7 @@ function getRequest() {
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState === 4 && xhttp.status === 200) {
             let data = JSON.parse(this.responseText);
+            //console.log(data);
             //console.log(data); //this is json 
             //console.log("received data", data); //comment this out - delete this line 
             let dummyCardName = "Dummy Card";
@@ -18,7 +19,7 @@ function getRequest() {
             //would mean the same thing
             let curr = dummyCard;
             //loop data 
-            for (let repo of data) {
+            for (let repo of data.items) {
                 let name = repo.name;
                 let description = repo.description;
                 let url = repo.html_url;
@@ -39,7 +40,7 @@ function getRequest() {
             previousBtn.innerText = "See Previous Project";
             nextBtn.className = "btn btn-primary";
             previousBtn.className = "btn btn-primary";
-            let totalCards = data.length + 1;
+            let totalCards = data.items.length + 1;
             nextBtn.addEventListener("click", function(){
                 curr = curr.getNextRepository();
                 //reset count 0 1 2 3 0 1 2 3 

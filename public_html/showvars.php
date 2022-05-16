@@ -1,6 +1,6 @@
 <?php
 
-$url = "https://api.github.com/user/repos";
+$url = "https://api.github.com/search/repositories?q=" . urlencode("portfolio project in:readme user:rahulnshah");
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
