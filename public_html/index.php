@@ -39,8 +39,8 @@
 	<br>
 	<div class="container">
 		<p id="demo"></p>
-		<div class="row md-5 g-4">
-		</div>
+		<!-- <div class="row md-5 g-4">
+		</div> -->
 	</div>
 	<br>
 	<!--github contribution chart-->

@@ -7,7 +7,7 @@
 			const showThem = function(key, json)
 			{
 				//you have a list of objects
-				let myFlash = document.getElementsByClassName("row")[0]; 
+				let myFlash = document.getElementsByClassName("container")[1]; 
 				let cardDiv = document.createElement("div");
 					cardDiv.className = "card border-dark";
 					let cardBody1 = document.createElement("div");
@@ -37,13 +37,13 @@
 					}
 					cardDiv.appendChild(cardBody1);
 					let colDiv = document.createElement("div");
-					colDiv.className = "col-6";
+					colDiv.className = "card mb-3";
 					colDiv.appendChild(cardDiv);
 					myFlash.appendChild(colDiv);
 			};
 			const showSkills = function(key, json)
 			{        
-					let myFlash = document.getElementsByClassName("row")[0];
+					let myFlash = document.getElementsByClassName("container")[1];
 					let cardDiv = document.createElement("div");
 					cardDiv.className = "card border-dark";
 					let cardBody1 = document.createElement("div");
@@ -59,14 +59,14 @@
 					cardBody1.appendChild(para);
 					cardDiv.appendChild(cardBody1);
 					let colDiv = document.createElement("div");
-					colDiv.className = "col-6";
+					colDiv.className = "card mb-3";
 					colDiv.appendChild(cardDiv);
 					myFlash.appendChild(colDiv);
 			};
 			const showBasics = 	function(key, json)
 			{
 				//make a bootstrap card here, and for card text, just sepearte each key-val pair with \n in the p element
-				let myFlash = document.getElementsByClassName("row")[0];
+				let myFlash = document.getElementsByClassName("container")[1];
 					let cardDiv = document.createElement("div");
 					cardDiv.className = "card border-dark";
 					let cardBody1 = document.createElement("div");
@@ -98,7 +98,7 @@
 					cardBody1.appendChild(para);
 					cardDiv.appendChild(cardBody1);
 					let colDiv = document.createElement("div");
-					colDiv.className = "col-6";
+					colDiv.className = "card mb-3";
 					colDiv.appendChild(cardDiv);
 					myFlash.appendChild(colDiv);
 			};
@@ -136,7 +136,7 @@
 			});*/
 			const hideResume = function (){
 				document.querySelector(".btn-danger").removeEventListener("click", hideResume);
-				document.querySelector(".row").hidden = true;
+				document.querySelectorAll(".container")[1].hidden = true;
 				document.querySelector(".btn-danger").innerText = "Show Resume";
 				document.querySelector(".btn-danger").className = "btn btn-dark";
 				//console.log("hideResume called!");
@@ -144,7 +144,7 @@
 			}
 			const unHideResume = function (){
 				document.querySelector(".btn-dark").removeEventListener("click", unHideResume);
-				document.querySelector(".row").hidden = false;
+				document.querySelectorAll(".container")[1].hidden = false;
 				document.querySelector(".btn-dark").innerText = "Hide Resume";
 				document.querySelector(".btn-dark").className = "btn btn-danger";
 				//console.log("unHideResume called!");
