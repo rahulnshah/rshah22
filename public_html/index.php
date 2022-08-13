@@ -131,7 +131,7 @@
 					//move curr to reference the next GitHubRepository object in list
 					curr = curr.getNextRepository();
 				}
-				//close the doubly linked list
+				//close the circular doubly linked list
 				curr.setNextRepository(listHead);
 				listHead.setPreviousRepository(curr);
 				</code>

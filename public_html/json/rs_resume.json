@@ -30,13 +30,14 @@
       ]
     },
     {
-      "name": "Kohl’s",
-      "position": "Customer Service Associate",
-      "startDate": "05\\26\\2021",
-      "endDate": "08\\29\\2021",
+      "name": "L3Harris Technologies",
+      "position": "Software Engineer Intern",
+      "startDate": "05\\23\\2022",
+      "endDate": "07\\29\\2022",
       "highlights": [
-        "Boosted customer satisfaction by 18% through suggesting best-fit shoes.",
-        "Increased efficiency of online order packing by grouping different components of each order."
+        "Created a custom reusable Sphinx documentation layout template using HTML, CSS, and JavaScript.",
+        "Designed a script that generates footprints of detected airports and runways on GeoTIFF and NITF images and other geospatial data using an Open Street Maps querying library called OSMnx.",
+        "Developed automated tests to address valid command line arguments that can be parsed by the Rare Planes metadata generator script."
       ]
     }],
     "education": [{
@@ -73,6 +74,7 @@
         "C++",
         "PHP",
         "Django",
+        "Node.js",
         "SQL",
         "MySQL",
         "Ajax",
@@ -81,12 +83,15 @@
         "Microsoft Excel",
         "MATLAB",
         "MS Visual Basic",
+        "Jupyter Notebook",
+        "NumPy",
+        "Matplotlib",
         "Windows",
         "Git",
         "Github"
     ],
     "languages": [{"language":"English", "fluency":"Excellent"}, 
       {"language":"Gujarati", "fluency":"Native"}, 
-      {"language":"Hindi", "fluency":"Excellent"}
+      {"language":"Hindi", "fluency":"Intermediate"}
     ]
   }
