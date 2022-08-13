@@ -21,7 +21,7 @@
 		<blockquote class="blockquote">
 		<p class="h1">Hi. I'm Rahul</p>
 		</blockquote>
-		<p class="text-center">Software Engineer, Leetcoder, Open Source Enthusiast</p>
+		<p class="text-center">Software Engineer, Leetcoder, Technical Writer</p>
 		<h3 class="text-center">🚀</h3>
 	</figure>
 	<div class= "container">
