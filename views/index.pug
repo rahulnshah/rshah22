@@ -1,0 +1,71 @@
+extends layout
+
+block layout-content
+    div.container
+        h1 Welcome!
+        p My name is Rahul. I am an undergraduate student at New Jersey Institute of Technology, where I am pursuing a Bachelor of Science in Computer Science degree. I enjoy building elegant software through programming. Web Development, Decentralized Applications (DApps), and Internet of Things (IoT) are things that excite me the most in the realm of Computer Science. On this homepage, you can find links to my personal projects and blog posts.
+        p If you have any questions or any suggestions about movies, games, or just want to say a friendly "Hello!", you can reach me at
+            a.text-decoration-none(href="mailto:rahulnshah24@gmail.com") rahulnshah24@gmail.com.
+    div.col-md-12.text-center
+        button.btn.btn-dark(type="button") Show Resume
+    br
+    div.container
+        p#demo
+    br
+    script(src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js")
+
+    // Optionally, include the theme (if you don't want to struggle to write the CSS)
+    link(rel="stylesheet", href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css")
+
+    // Prepare a container for your calendar.
+    div.container
+    div.calendar
+        // Loading stuff
+        | Loading the data just for you.
+    br
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js")
+    div.container
+        h3.text-center Data Structures I Used
+        ul.list-unstyled
+            ul
+                li
+                    h4 Map
+                    pre
+                        code.language-javascript.
+                            const showThem = function(key, json){...};
+                            const showSkills = function(key, json){...};
+                            const showBasics = function(key, json){...};
+                            const map1 = new Map();
+                            // store the functions as value and property as key
+                            for (const property in json) {
+                                // ...
+                            }
+                            // loop the map and call each key's function and call each function
+                            for (const property in json) {
+                                map1.get(property)(property,json);
+                            }
+                li
+                    h4 Array
+                pre
+                    code.language-javascript.
+                        // put all prop. from json into allKeys in order
+                        const allKeys = [];
+                        for (const property in json){
+                            allKeys.push(property);
+                        }
+                li
+                    h4 Stack
+                pre
+                    code.language-javascript.
+                        // fill in innerHTML here
+                        document.querySelector("#demo").innerText = "Loaded";
+                        while(allKeys.length !== 0) {
+                            // pop from allKeys - Last In First Out behavior shown here
+                            document.querySelector("#demo").innerText += "..." + allKeys.pop();
+                        }
+                        // Loaded...languages......basics
+    script.
+        // or enable responsive functionality:
+        GitHubCalendar(".calendar", "rahulnshah", { responsive: true, tooltips: true});
+
+    script(src="scripts/showRes.js")
