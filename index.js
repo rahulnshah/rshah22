@@ -3,7 +3,7 @@
 /**
  * Required External Modules
  */
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+// const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -11,7 +11,6 @@ const port = process.env.PORT || "8000";
 // const GitHubRepository = require('./public/scripts/githubRepo');
 if(process.env.NODE_ENV !== 'production')
 {
-    console.log("executed");
     require('dotenv').config();
 }
 /**

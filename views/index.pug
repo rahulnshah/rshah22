@@ -19,51 +19,23 @@ block layout-content
 
     // Prepare a container for your calendar.
     div.container
-    div.calendar
-        // Loading stuff
-        | Loading the data just for you.
+        div.calendar
+            // Loading stuff
+            | Loading the data just for you.
     br
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js")
     div.container
         h3.text-center Data Structures I Used
         ul.list-unstyled
             ul
                 li
                     h4 Map
-                    pre
-                        code.language-javascript.
-                            const showThem = function(key, json){...};
-                            const showSkills = function(key, json){...};
-                            const showBasics = function(key, json){...};
-                            const map1 = new Map();
-                            // store the functions as value and property as key
-                            for (const property in json) {
-                                // ...
-                            }
-                            // loop the map and call each key's function and call each function
-                            for (const property in json) {
-                                map1.get(property)(property,json);
-                            }
+                script(src="https://gist.github.com/rahulnshah/b9e90e32eb71912fdcaf50316d0b46b3.js")
                 li
                     h4 Array
-                pre
-                    code.language-javascript.
-                        // put all prop. from json into allKeys in order
-                        const allKeys = [];
-                        for (const property in json){
-                            allKeys.push(property);
-                        }
+                script(src="https://gist.github.com/rahulnshah/05e2729fee3b22c2054dc3013934632f.js")
                 li
                     h4 Stack
-                pre
-                    code.language-javascript.
-                        // fill in innerHTML here
-                        document.querySelector("#demo").innerText = "Loaded";
-                        while(allKeys.length !== 0) {
-                            // pop from allKeys - Last In First Out behavior shown here
-                            document.querySelector("#demo").innerText += "..." + allKeys.pop();
-                        }
-                        // Loaded...languages......basics
+                script(src="https://gist.github.com/rahulnshah/f910299bcad4a1717e4e67e2b42fff52.js")
     script.
         // or enable responsive functionality:
         GitHubCalendar(".calendar", "rahulnshah", { responsive: true, tooltips: true});
