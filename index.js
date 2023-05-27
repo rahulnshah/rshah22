@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
     res.render("index");
 });
 
-app.get('/my_projects', (req, res) => {
+app.get('/my_projects', (req, res, next) => {
     // run fetch request
     const url = "https://api.github.com/search/repositories?q=" + encodeURIComponent('portfolio project in:readme user:rahulnshah');
         
@@ -52,13 +52,34 @@ app.get('/my_projects', (req, res) => {
     .then(data => {
         res.render("my_projects", {h1_text : "A Few of my creations", all_projects : data});
     })
-    .catch(error => {
-				console.log(`Could not redirect: ${error.message}`);
+    .catch(err => {
+		next(err);
 	});
 });
+// catch 404 and forward to error handler
+app.use((req, res, next) => {
+    const err = new Error("Not Found");
+    err.status = 404;
+    next(err);
+});
+
 /**
  * Server Activation
  */
+// error handlers
+app.use((err, req, res, next) => {
+    res.status(err.status || 500);
+    if(err.status == 404)
+    {
+        res.render("404_page", {h1_text : err.message, err_status : err.status});
+    }
+    else
+    {
+        return res.json({
+            message: err.message
+        });
+    }
+});
 
 app.listen(port, () => {
     console.log(`Listening to requests on http://localhost:${port}`);

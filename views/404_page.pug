@@ -1,0 +1,22 @@
+extends layout
+
+block layout-content
+    -
+        let status_code = err_status;
+        let multipleOfTen = 1;
+
+        // make an empty array and fill it up with digits of the status code and multipleOfTen
+        const allFactoredStrings = [];
+
+        while(status_code > 0)
+        {
+            allFactoredStrings.unshift(`${status_code % 10} * ${multipleOfTen}`);
+            multipleOfTen = multipleOfTen * 10;
+            status_code = Math.floor(status_code / 10);
+        }
+
+        let paragraph_message = allFactoredStrings.join(" + ");
+    
+    h2.text-center #{paragraph_message} = #{err_status}
+
+        
