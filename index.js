@@ -3,12 +3,12 @@
 /**
  * Required External Modules
  */
-// const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
 const express = require("express");
 const path = require("path");
 const app = express();
 const port = process.env.PORT || "8000";
-// const GitHubRepository = require('./public/scripts/githubRepo');
+
 if(process.env.NODE_ENV !== 'production')
 {
     require('dotenv').config();
@@ -56,6 +56,7 @@ app.get('/my_projects', (req, res, next) => {
 		next(err);
 	});
 });
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
     const err = new Error("Not Found");
@@ -63,9 +64,6 @@ app.use((req, res, next) => {
     next(err);
 });
 
-/**
- * Server Activation
- */
 // error handlers
 app.use((err, req, res, next) => {
     res.status(err.status || 500);
@@ -81,6 +79,9 @@ app.use((err, req, res, next) => {
     }
 });
 
+/**
+ * Server Activation
+ */
 app.listen(port, () => {
     console.log(`Listening to requests on http://localhost:${port}`);
 });
