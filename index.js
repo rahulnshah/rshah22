@@ -73,9 +73,12 @@ app.use((err, req, res, next) => {
     {
         res.render("404_page", {h1_text : err.message, err_status : err.status});
     }
-    return res.json({
-      message: err.message
-    });
+    else
+    {
+        return res.json({
+        message: err.message
+        });
+    }
 });
 
 app.listen(port, () => {
