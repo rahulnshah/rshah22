@@ -8,6 +8,8 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const port = process.env.PORT || "8000";
+// require our routes/index.js file
+const {router} = require("./routes/index");
 
 if(process.env.NODE_ENV !== 'production')
 {
@@ -23,39 +25,9 @@ app.use(express.static(path.join(__dirname, "public")));
 /**
  * Routes Definitions
  */
-app.get('/', (req, res) => {
-    res.render("index");
-});
 
-app.get('/my_projects', (req, res, next) => {
-    // run fetch request
-    const url = "https://api.github.com/search/repositories?q=" + encodeURIComponent('portfolio project in:readme user:rahulnshah');
-        
-    // read our json
-    let fetchPromise = fetch(url, {
-        method : "GET",
-        headers : {
-            "Accept" : "application/vnd.github+json",
-            //hide this using ENV var
-            "Authorization" : `Bearer ${process.env.TOKEN}`,
-            "User-Agent" : "rahulnshah"
-        }
-    });
-    
-    fetchPromise
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        res.render("my_projects", {h1_text : "A Few of my creations", all_projects : data});
-    })
-    .catch(err => {
-		next(err);
-	});
-});
+// Now let's tell our app about those routes we made!
+app.use(router);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

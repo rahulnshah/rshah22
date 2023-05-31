@@ -20,7 +20,6 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "node-fetch": "^2.6.11",
     "pug": "^3.0.2"
   }
 }
