@@ -1,51 +1,59 @@
 {
-    "basics": {
-      "email": "rahulnshah24@gmail.com",
-      "url": "https://github.com/rahulnshah"
-    },
-    "profiles":[{"network": "Linkedin",
-                  "url": "https://www.linkedin.com/in/rahulnshah/"
-    }],
-    "experience": [{
-      "name": "New Jersey Institute of Technology",
-      "position": "Campus Center Student Associate",
-      "startDate": "09\\01\\2020",
-      "endDate": "05\\26\\2024",
-      "highlights": [
-        "Regularly responded to 10+ student inquiries at the Information Desk.",
-        "Channeled NJIT resources such as conference rooms and breakout rooms to students.",
-        "Oversaw adherence to COVID-19 guidelines in Campus Center and Central King Building."
-
-      ]
+  "basics": {
+    "email": "rahulnshah24@gmail.com"
+  },
+  "profiles": [
+    {
+      "network": "Linkedin",
+      "url": "https://www.linkedin.com/in/rahulnshah/"
     },
     {
-      "name": "Mathnasium",
-      "position": "Math Tutor",
-      "startDate": "05\\01\\2020",
-      "endDate": "06\\01\\2020",
+      "network": "GitHub",
+      "url": "https://github.com/rahulnshah"
+    }
+  ],
+  "experience": [
+    {
+      "name": "Fannie Mae",
+      "position": "Technology Intern",
+      "From": "06\\05\\2023",
+      "To": "08\\11\\2023",
       "highlights": [
-        "Taught basic math concepts ranging from arithmetic to algebra to students ages K-12.",
-        "Assisted students with class assignments and gave one-on-one guidance to increase the rate of learning and growth.",
-        "Learned to tailor my teaching style to children of varying levels of competency."
+        "Developed 5 Angular components to display specific loan data based on different criteria on a compliance monitoring dashboard, fetching data from the backend using API services.",
+        "Implemented token-based authentication via Spring boot to control access to the dashboard.",
+        "Increased line coverage of the UIDataMapper service by writing JUnit and Mockito test cases"
       ]
     },
     {
       "name": "L3Harris Technologies",
       "position": "Software Engineer Intern",
-      "startDate": "05\\23\\2022",
-      "endDate": "07\\29\\2022",
+      "From": "05\\23\\2022",
+      "To": "07\\29\\2022",
       "highlights": [
         "Created a custom reusable Sphinx documentation layout template using HTML, CSS, and JavaScript.",
         "Designed a script that generates footprints of detected airports and runways on GeoTIFF and NITF images and other geospatial data using an Open Street Maps querying library called OSMnx.",
         "Developed automated tests to address valid command line arguments that can be parsed by the Rare Planes metadata generator script."
       ]
-    }],
-    "education": [{
+    },
+    {
+      "name": "New Jersey Institute of Technology",
+      "position": "Campus Center Student Associate",
+      "From": "09\\01\\2020",
+      "To": "05\\26\\2024",
+      "highlights": [
+        "Regularly responded to 10+ student inquiries at the Information Desk.",
+        "Channeled NJIT resources such as conference rooms and breakout rooms to students.",
+        "Oversaw adherence to COVID-19 guidelines in Campus Center and Central King Building."
+      ]
+    }
+  ],
+  "education": [
+    {
       "institution": "New Jersey Institute of Technology",
       "url": "https://www.njit.edu/",
       "degree": "Bachelor of Science in Computer Science",
-      "startDate": "09\\01\\2020",
-      "endDate": "04\\15\\2024",
+      "From": "09\\01\\2020",
+      "To": "04\\15\\2024",
       "gpa": "3.9",
       "courses": [
         "Internet Applications",
@@ -58,40 +66,42 @@
         "Probability and Statistics",
         "Roadmap To Computing (Python)"
       ]
-    }],
-    "awards": [{
+    }
+  ],
+  "awards": [
+    {
       "title": "AP Scholar with Honor",
       "date": "08\\29\\2020",
       "awarder": "College Board",
       "summary": "Granted to students who receive an average score of at least 3.25 on all AP Exams taken, and scores of 3 or higher on four or more of these exams."
-    }],
-    "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Python",
-        "Java",
-        "C++",
-        "PHP",
-        "Django",
-        "Node.js",
-        "SQL",
-        "MySQL",
-        "Ajax",
-        "Bootstrap",
-        "jQuery",
-        "Microsoft Excel",
-        "MATLAB",
-        "MS Visual Basic",
-        "Jupyter Notebook",
-        "NumPy",
-        "Matplotlib",
-        "Windows",
-        "Git",
-        "Github"
-    ],
-    "languages": [{"language":"English", "fluency":"Excellent"}, 
-      {"language":"Gujarati", "fluency":"Native"}, 
-      {"language":"Hindi", "fluency":"Intermediate"}
-    ]
-  }
+    }
+  ],
+  "skills": [
+    "Spring Boot",
+    "React.js",
+    "Angular.js",
+    "Express.js",
+    "Django",
+    "Mockito",
+    "PHP",
+    "JUnit 5",
+    "Node.js",
+    "MySQL",
+    "Jupyter Notebook",
+    "Python"
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Excellent"
+    },
+    {
+      "language": "Gujarati",
+      "fluency": "Native"
+    },
+    {
+      "language": "Hindi",
+      "fluency": "Intermediate"
+    }
+  ]
+}
