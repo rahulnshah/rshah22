@@ -3,7 +3,7 @@ extends layout
 block layout-content
     div.container
         h1 Welcome!
-        p My name is Rahul. I am a rising senior #[b Honors Computer Science] student at the #[b New Jersey Institute of Technology].  I enjoy building elegant software through programming. My interests lie in Web Development, Decentralized Applications (DApps), and DevOps. On this homepage, you can find links to my personal projects and blog posts.
+        p I am Rahul. I am a rising senior #[b Honors Computer Science] student at the #[b New Jersey Institute of Technology].  I enjoy building elegant software through programming. My interests lie in Web Development, Decentralized Applications (DApps), and DevOps. In my spare time, I like to read books or play volleyball with my friends.  On this homepage, you can find links to my personal projects and blog posts.  Feel free to explore!
         p If you have any questions or any suggestions about movies, games, or just want to say "Hello!", you can reach me at #[a.text-decoration-none(href="mailto:rahulnshah24@gmail.com") rahulnshah24@gmail.com]
     div.col-md-12.text-center
         button.btn.btn-dark(type="button") Show Resume
@@ -11,19 +11,8 @@ block layout-content
     div.container
         p#demo
     br
-    script(src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js")
-
-    // Optionally, include the theme (if you don't want to struggle to write the CSS)
-    link(rel="stylesheet", href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css")
-
-    // Prepare a container for your calendar.
     div.container
-        div.calendar
-            // Loading stuff
-            | Loading the data just for you.
-    br
-    div.container
-        h3.text-center Data Structures I Used
+        h4.text-center Data Structures I Used For This Site
         ul.list-unstyled
             ul
                 li
@@ -35,8 +24,5 @@ block layout-content
                 li
                     h4 Stack
                 script(src="https://gist.github.com/rahulnshah/f910299bcad4a1717e4e67e2b42fff52.js")
-    script.
-        // or enable responsive functionality:
-        GitHubCalendar(".calendar", "rahulnshah", { responsive: true, tooltips: true});
-
+    
     script(src="scripts/showRes.js")
