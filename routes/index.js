@@ -27,7 +27,7 @@ router.get('/my_projects', async function(req, res, next){
         // read our json
         let data = await response.json();
 
-        res.render("my_projects", {h1_text : "A Few of my creations", all_projects : data.items});
+        res.render("my_projects", {h1_text : "Projects", all_projects : data.items});
         
     }
     catch(err)
