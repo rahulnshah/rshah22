@@ -10,6 +10,7 @@ const app = express();
 const port = process.env.PORT || "8000";
 // require our routes/index.js file
 const {router} = require("./routes/index");
+const { ProjectPageError } = require("./views/errors");
 
 if(process.env.NODE_ENV !== 'production')
 {
@@ -42,6 +43,13 @@ app.use((err, req, res, next) => {
     if(err.status == 404)
     {
         res.render("404_page", {h1_text : err.message, err_status : err.status});
+    }
+    else if(err instanceof ProjectPageError)
+    {
+        if(err.type === "project details")
+        {
+            res.render("my_projects", {h1_text : "A Few of my creations", all_projects : []});
+        }
     }
     else
     {
