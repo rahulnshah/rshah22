@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || "8000";
 // require our routes/index.js file
 const {router} = require("./routes/index");
-const { ProjectPageError } = require("./views/errors");
+const { ProjectPageError } = require("./errors");
 
 if(process.env.NODE_ENV !== 'production')
 {
