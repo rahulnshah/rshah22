@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/rahulnshah/rShahPortfoilioSite#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "nodemailer": "^6.9.4",
     "pug": "^3.0.2"
   }
 }
