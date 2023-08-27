@@ -51,7 +51,8 @@ router.get('/my_projects', async function (req, res, next) {
 });
 
 router.post('/api/email', function (req, res, next) {
-    let { from, to, subject, text } = req.body;
+    let from = process.env.EMAIL;
+    let { to, subject, text } = req.body;
     const data = { from, to, subject, text };
     nodemailerMailgun.sendMail(data, function (err, response) {
         if (err) {
