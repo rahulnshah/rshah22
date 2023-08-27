@@ -13,10 +13,7 @@ const port = process.env.PORT || "8000";
 const {router} = require("./routes/index");
 const { ProjectPageError } = require("./errors");
 
-if(process.env.NODE_ENV !== 'production')
-{
-    require('dotenv').config();
-}
+
 /**
  *  App Configuration
  */

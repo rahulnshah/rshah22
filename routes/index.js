@@ -2,12 +2,13 @@ const express = require("express");
 const router = express.Router();
 const { ProjectsInaccesibleError } = require('../errors');
 var nodemailer = require('nodemailer');
+require('dotenv').config();
 
 const config = {
     service: "gmail",
     auth: {
-        user: "rahulnshah24@gmail.com",
-        pass: "dsiglhqjduqxuufc"
+        user: process.env.EMAIL,
+        pass: process.env.PASS
     }
 };
 
