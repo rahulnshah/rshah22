@@ -18,4 +18,16 @@ html
           else
             | Hi, I am Rahul. 
     block layout-content
+    div.container
+      .mb-3
+          label.form-label(for="exampleFormControlInput1") From
+          input.form-control(type="email" id="exampleFormControlInput1" placeholder="name@example.com")
+      .mb-3
+          label.form-label(for="exampleFormControlInput2") Subject
+          input.form-control(type="email" id="exampleFormControlInput2" placeholder="")
+      .mb-3
+          label.form-label(for="exampleFormControlTextarea1") Message
+          textarea.form-control(id="exampleFormControlTextarea1" rows="3")
+      .mb3
+          button.btn.btn-primary.mb-3(type="submit") Send
     include includes/footer.pug

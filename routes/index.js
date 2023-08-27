@@ -15,7 +15,7 @@ const config = {
 
 var nodemailerMailgun = nodemailer.createTransport(config);
 // require the mail schema (a JSON file generated on jsonschema.net)
-const mailSchema = require('../public/mailSchema.json');
+const mailSchema = require('../public/json/mailSchema.json');
 
 router.get('/', (req, res) => {
     res.render("index");
