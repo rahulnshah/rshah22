@@ -21,6 +21,7 @@
                 "from": {
                     "title": "The from Schema",
                     "type": "string",
+                    "pattern" : "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
                     "default": "",
                     "examples": [
                         "rickgrimes@gmail.com"

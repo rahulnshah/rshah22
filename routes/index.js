@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { ProjectsInaccesibleError } = require('../errors');
+const { ProjectsInaccesibleError, LongSubjectError, LongTextError } = require('../errors');
 var nodemailer = require('nodemailer');
 const { validate } = require('jsonschema');
 require('dotenv').config();
@@ -51,21 +51,30 @@ router.get('/my_projects', async function (req, res, next) {
 });
 
 router.post('/api/email', function (req, res, next) {
-    
+
     // check if the current request.body payload is a valid mail
     const result = validate(req.body, mailSchema);
 
     // jsonschema validation results in a "valid" key being set to "false" if the instance doesn't match the schema
     if (!result.valid) {
-        return next(result.errors.map(error => error.message));
+        return next(result.errors);
     }
 
     let to = process.env.EMAIL;
-    let { from, subject, text } = req.body;
+    let { from, subject, text } = req.body.data;
     const data = { from, to, subject, text };
 
-    //TODO: add more validation via regex
-
+    try {
+        if (subject.length > 30) {
+            throw new LongSubjectError(subject);
+        }
+        if (text.length > 300) {
+            throw new LongTextError(text);
+        }
+    }
+    catch (err) {
+        return next(err);
+    }
     nodemailerMailgun.sendMail(data, function (err, response) {
         if (err) {
             next(err);

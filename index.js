@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || "8000";
 // require our routes/index.js file
 const { router } = require("./routes/index");
-const { ProjectPageError } = require("./errors");
+const { ProjectPageError, CharacterCountExceeded} = require("./errors");
 
 
 /**
@@ -38,8 +38,18 @@ app.use((req, res, next) => {
 
 // error logger
 app.use((err, req, res, next) => {
-    console.error('\x1b[31m', err) // adding some color to our logs
-    next(err) // calling next middleware
+    if (Array.isArray(err)) 
+    {
+        for(let error of err)
+        {
+            console.error('\x1b[31m', err); // adding some color to our logs
+        }
+    }
+    else
+    {
+        console.error('\x1b[31m', err); // adding some color to our logs
+    }
+    next(err); // calling next middleware
 });
 
 // error responder 
@@ -56,6 +66,15 @@ app.use((err, req, res, next) => {
         else if (err instanceof ProjectPageError) {
             if (err.type === "project details") {
                 res.render("my_projects", { h1_text: "Projects", all_projects: [] });
+            }
+        }
+        else if(err instanceof CharacterCountExceeded)
+        {
+            if(err.type === 'subject' || err.type === 'text')
+            {
+                return res.json({
+                    error : err.message
+                });
             }
         }
         else {
