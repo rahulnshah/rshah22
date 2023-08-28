@@ -68,15 +68,6 @@ app.use((err, req, res, next) => {
                 res.render("my_projects", { h1_text: "Projects", all_projects: [] });
             }
         }
-        else if(err instanceof CharacterCountExceeded)
-        {
-            if(err.type === 'subject' || err.type === 'text')
-            {
-                return res.json({
-                    error : err.message
-                });
-            }
-        }
         else {
             return res.json({
                 error : err.message

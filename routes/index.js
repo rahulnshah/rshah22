@@ -57,30 +57,20 @@ router.post('/api/email', function (req, res, next) {
 
     // jsonschema validation results in a "valid" key being set to "false" if the instance doesn't match the schema
     if (!result.valid) {
-        return next(result.errors);
+        let errors = result.errors.map(error => error.stack);
+        return res.render("layout", { contact_form_msgs: errors });
     }
 
     let to = process.env.EMAIL;
     let { from, subject, text } = req.body.data;
     const data = { from, to, subject, text };
 
-    try {
-        if (subject.length > 30) {
-            throw new LongSubjectError(subject);
-        }
-        if (text.length > 300) {
-            throw new LongTextError(text);
-        }
-    }
-    catch (err) {
-        return next(err);
-    }
     nodemailerMailgun.sendMail(data, function (err, response) {
         if (err) {
             next(err);
         }
         else {
-            res.send('email sent!');
+            res.render("layout", { contact_form_msgs: ['email sent!'] });
         }
     });
 });

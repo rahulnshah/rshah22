@@ -19,6 +19,14 @@ html
             | Hi, I am Rahul. 
     block layout-content
     div.container
+      div.list-group
+        if contact_form_msgs && contact_form_msgs.length > 0
+          ul
+            each msg in contact_form_msgs
+              if msg === 'email sent!'
+                li.list-group-item.list-group-item-success msg
+              else
+                li.list-group-item.list-group-item-info msg
       h4.text-center(class="contact-form-header") Contact Form
       .mb-3
           label.form-label(for="exampleFormControlInput1") From

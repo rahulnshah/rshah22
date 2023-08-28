@@ -21,7 +21,7 @@
                 "from": {
                     "title": "The from Schema",
                     "type": "string",
-                    "pattern" : "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+                    "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
                     "default": "",
                     "examples": [
                         "rickgrimes@gmail.com"
@@ -30,6 +30,7 @@
                 "subject": {
                     "title": "The subject Schema",
                     "type": "string",
+                    "maxLength": 50,
                     "default": "",
                     "examples": [
                         "Regarding Your Services"
@@ -38,6 +39,7 @@
                 "text": {
                     "title": "The text Schema",
                     "type": "string",
+                    "maxLength": 300,
                     "default": "",
                     "examples": [
                         "Hello, I'm interested in learning more about your services."

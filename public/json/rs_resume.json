@@ -5,19 +5,19 @@
   "profiles": [
     {
       "network": "Linkedin",
-      "url": "https://www.linkedin.com/in/rahulnshah/"
+      "url": "https:/www.linkedin.com/in/rahulnshah/"
     },
     {
       "network": "GitHub",
-      "url": "https://github.com/rahulnshah"
+      "url": "https:/github.com/rahulnshah"
     }
   ],
   "experience": [
     {
       "name": "Fannie Mae",
       "position": "Technology Intern",
-      "From": "06\\05\\2023",
-      "To": "08\\11\\2023",
+      "From": "06/05/2023",
+      "To": "08/11/2023",
       "highlights": [
         "Developed 5 Angular components to display specific loan data based on different criteria on a compliance monitoring dashboard, fetching data from the backend using API services.",
         "Implemented token-based authentication via Spring boot to control access to the dashboard.",
@@ -27,8 +27,8 @@
     {
       "name": "L3Harris Technologies",
       "position": "Software Engineer Intern",
-      "From": "05\\23\\2022",
-      "To": "07\\29\\2022",
+      "From": "05/23/2022",
+      "To": "07/29/2022",
       "highlights": [
         "Created a custom reusable Sphinx documentation layout template using HTML, CSS, and JavaScript.",
         "Designed a script that generates footprints of detected airports and runways on GeoTIFF and NITF images and other geospatial data using an Open Street Maps querying library called OSMnx.",
@@ -38,8 +38,8 @@
     {
       "name": "New Jersey Institute of Technology",
       "position": "Campus Center Student Associate",
-      "From": "09\\01\\2020",
-      "To": "05\\26\\2024",
+      "From": "09/01/2020",
+      "To": "05/26/2024",
       "highlights": [
         "Regularly responded to 10+ student inquiries at the Information Desk.",
         "Channeled NJIT resources such as conference rooms and breakout rooms to students.",
@@ -50,10 +50,10 @@
   "education": [
     {
       "institution": "New Jersey Institute of Technology",
-      "url": "https://www.njit.edu/",
+      "url": "https:/www.njit.edu/",
       "degree": "Bachelor of Science in Computer Science",
-      "From": "09\\01\\2020",
-      "To": "04\\15\\2024",
+      "From": "09/01/2020",
+      "To": "04/15/2024",
       "gpa": "3.9",
       "courses": [
         "Internet Applications",
@@ -71,7 +71,7 @@
   "awards": [
     {
       "title": "AP Scholar with Honor",
-      "date": "08\\29\\2020",
+      "date": "08/29/2020",
       "awarder": "College Board",
       "summary": "Granted to students who receive an average score of at least 3.25 on all AP Exams taken, and scores of 3 or higher on four or more of these exams."
     }
