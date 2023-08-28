@@ -51,6 +51,15 @@ router.get('/my_projects', async function (req, res, next) {
 });
 
 router.post('/api/email', function (req, res, next) {
+    
+    // check if the current request.body payload is a valid mail
+    const result = validate(req.body, mailSchema);
+
+    // jsonschema validation results in a "valid" key being set to "false" if the instance doesn't match the schema
+    if (!result.valid) {
+        return next(result.errors.map(error => error.message));
+    }
+
     let to = process.env.EMAIL;
     let { from, subject, text } = req.body;
     const data = { from, to, subject, text };

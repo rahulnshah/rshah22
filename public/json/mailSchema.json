@@ -1,1 +1,64 @@
-{}
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "title": "Root Schema",
+    "type": "object",
+    "default": {},
+    "required": [
+        "data"
+    ],
+    "properties": {
+        "data": {
+            "title": "The data Schema",
+            "type": "object",
+            "default": {},
+            "required": [
+                "from",
+                "subject",
+                "text"
+            ],
+            "properties": {
+                "from": {
+                    "title": "The from Schema",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "rickgrimes@gmail.com"
+                    ]
+                },
+                "subject": {
+                    "title": "The subject Schema",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "Regarding Your Services"
+                    ]
+                },
+                "text": {
+                    "title": "The text Schema",
+                    "type": "string",
+                    "default": "",
+                    "examples": [
+                        "Hello, I'm interested in learning more about your services."
+                    ]
+                }
+            },
+            "examples": [
+                {
+                    "from": "rickgrimes@gmail.com",
+                    "subject": "Regarding Your Services",
+                    "text": "Hello, I'm interested in learning more about your services."
+                }
+            ]
+        }
+    },
+    "examples": [
+        {
+            "data": {
+                "from": "rickgrimes@gmail.com",
+                "subject": "Regarding Your Services",
+                "text": "Hello, I'm interested in learning more about your services."
+            }
+        }
+    ]
+}
