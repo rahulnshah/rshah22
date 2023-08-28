@@ -63,6 +63,9 @@ router.post('/api/email', function (req, res, next) {
     let to = process.env.EMAIL;
     let { from, subject, text } = req.body;
     const data = { from, to, subject, text };
+
+    //add more validation via regex
+
     nodemailerMailgun.sendMail(data, function (err, response) {
         if (err) {
             next(err);
