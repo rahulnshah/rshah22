@@ -7,8 +7,9 @@ scrollToContactFormButton.addEventListener('click', function () {
   formHeader.scrollIntoView({ behavior: 'smooth' });
 });
 
-contactFormSubmitButton.addEventListener('submit', function (e) {
+contact_form.addEventListener('submit', function (e) {
   e.preventDefault();
+  console.log("form submitted!");
   const contact_form_data = new FormData(contact_form);
   // convert the data in URL encoded data 
   const contact_data = new URLSearchParams(contact_form_data);
