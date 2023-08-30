@@ -5,11 +5,11 @@
   "profiles": [
     {
       "network": "Linkedin",
-      "url": "https:/www.linkedin.com/in/rahulnshah/"
+      "url": "https://www.linkedin.com/in/rahulnshah"
     },
     {
       "network": "GitHub",
-      "url": "https:/github.com/rahulnshah"
+      "url": "https://github.com/rahulnshah"
     }
   ],
   "experience": [
@@ -50,7 +50,7 @@
   "education": [
     {
       "institution": "New Jersey Institute of Technology",
-      "url": "https:/www.njit.edu/",
+      "url": "https://www.njit.edu/",
       "degree": "Bachelor of Science in Computer Science",
       "From": "09/01/2020",
       "To": "04/15/2024",
