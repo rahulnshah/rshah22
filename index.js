@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || "8000";
 // require our routes/index.js file
 const { router } = require("./routes/index");
-const { ProjectPageError, CharacterCountExceeded} = require("./errors");
+const { ProjectPageError } = require("./errors");
 
 /**
  *  App Configuration

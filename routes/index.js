@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { ProjectsInaccesibleError, LongSubjectError, LongTextError } = require('../errors');
+const { ProjectsInaccessibleError } = require('../errors');
 var nodemailer = require('nodemailer');
 const { validate } = require('jsonschema');
 
@@ -28,7 +28,7 @@ router.get('/my_projects', async function (req, res, next) {
     try {
 
         if (!process.env.TOKEN) {
-            throw new ProjectsInaccesibleError();
+            throw new ProjectsInaccessibleError();
         }
 
         // run fetch request
