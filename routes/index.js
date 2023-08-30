@@ -3,13 +3,16 @@ const router = express.Router();
 const { ProjectsInaccesibleError, LongSubjectError, LongTextError } = require('../errors');
 var nodemailer = require('nodemailer');
 const { validate } = require('jsonschema');
-require('dotenv').config();
+
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 
 const config = {
     service: "gmail",
     auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASS
+        user: `${process.env.EMAIL}`,
+        pass: `${process.env.PASS}`
     }
 };
 
@@ -58,7 +61,7 @@ router.post('/api/email', function (req, res, next) {
     // jsonschema validation results in a "valid" key being set to "false" if the instance doesn't match the schema
     if (!result.valid) {
         let errors = result.errors.map(error => error.stack.substring(error.stack.lastIndexOf(".") + 1));
-        res.json({ contact_form_msgs: errors});
+        res.json({ contact_form_msgs: errors });
         return;
     }
 
@@ -66,9 +69,9 @@ router.post('/api/email', function (req, res, next) {
         from: req.body.data.from,
         to: process.env.EMAIL,
         subject: req.body.data.subject,
-        text : req.body.data.text
+        text: req.body.data.text
     };
-    
+
     nodemailerMailgun.sendMail(mailOpts, function (err, response) {
         if (err) {
             next(err);

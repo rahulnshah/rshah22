@@ -21,7 +21,7 @@ contact_form.addEventListener('submit', function (e) {
   // convert the data in URL encoded data 
   //const contact_data = new URLSearchParams(payload);
 
-  const postFetchPromise = fetch("https://r-shah-portfoilio-site.vercel.app/api/email", {
+  const postFetchPromise = fetch("/api/email", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
