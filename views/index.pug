@@ -1,28 +1,27 @@
 extends layout
 
 block layout-content
-    div.container
-        h3 Welcome!
-        p I am Rahul. I am a rising senior #[b Honors Computer Science] student at the #[b New Jersey Institute of Technology].  I enjoy building elegant software through programming. My interests lie in Web Development, Decentralized Applications (DApps), and DevOps. In my spare time, I like to read books or play volleyball with my friends.  On this homepage, you can find links to my personal projects and blog posts.  Feel free to explore!
-        p If you have any questions or any suggestions about movies, games, or just want to say "Hello!", you can reach me at #[a.text-decoration-none(href="mailto:rahulnshah24@gmail.com") rahulnshah24@gmail.com]
+    h3 Welcome!
+    p I am Rahul. I am a rising senior #[b Honors Computer Science] student at the #[b New Jersey Institute of Technology].  I enjoy building elegant software through programming. My interests lie in Web Development, Decentralized Applications (DApps), and DevOps. In my spare time, I like to read books or play volleyball with my friends.  On this homepage, you can find links to my personal projects and blog posts.  Feel free to explore!
+    p If you have any questions or any suggestions about movies, games, or just want to say "Hello!", you can reach me at #[a.text-decoration-none(href="mailto:rahulnshah24@gmail.com") rahulnshah24@gmail.com]
     div.col-md-12.text-center
         button.btn.btn-dark(type="button") Show Resume
     br
-    div.container
-        p#demo
+    p#demo
+    div#resume-box
     br
-    div.container
-        h4.text-center Data Structures I Used For This Site
-        ul.list-unstyled
-            ul
-                li
-                    h4 Map
-                script(src="https://gist.github.com/rahulnshah/b9e90e32eb71912fdcaf50316d0b46b3.js")
-                li
-                    h4 Array
-                script(src="https://gist.github.com/rahulnshah/05e2729fee3b22c2054dc3013934632f.js")
-                li
-                    h4 Stack
-                script(src="https://gist.github.com/rahulnshah/f910299bcad4a1717e4e67e2b42fff52.js")
+    h4.text-center Data Structures I Used For This Site
+    ul
+        li
+            h5 Map
+    script(src="https://gist.github.com/rahulnshah/b9e90e32eb71912fdcaf50316d0b46b3.js")
+    ul
+        li
+            h5 Array
+    script(src="https://gist.github.com/rahulnshah/05e2729fee3b22c2054dc3013934632f.js")
+    ul
+        li
+            h5 Stack
+    script(src="https://gist.github.com/rahulnshah/f910299bcad4a1717e4e67e2b42fff52.js")
     
     script(src="scripts/showRes.js")

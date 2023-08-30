@@ -17,5 +17,21 @@ html
             = h1_text
           else
             | Hi, I am Rahul. 
-    block layout-content
-    include includes/footer.pug
+    div.container
+      block layout-content
+      ul#contact-from-msg-box.list-group
+      h4.text-center(class="contact-form-header") Contact Form
+      form#contact-form(action="#" method='post')
+        .mb-3
+            label.form-label(for="email") From
+            input.form-control(type="email" name="from" id="email" placeholder="name@example.com" required)
+        .mb-3
+            label.form-label(for="subject") Subject
+            input.form-control(id="subject" name="subject" placeholder="" required)
+        .mb-3
+            label.form-label(for="text") Message
+            textarea.form-control(id="text" name="text" rows="3" required)
+        .mb3
+            input#contactFormButton.btn.btn-primary.mb-3(type="submit" value="Send")
+      include includes/footer.pug
+    script(src="scripts/scrollToContactForm.js")

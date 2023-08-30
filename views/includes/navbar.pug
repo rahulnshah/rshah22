@@ -1,6 +1,5 @@
 nav#my-navbar.navbar.navbar-expand-lg.navbar-light
   div.container-fluid
-    // <a class="navbar-brand" href="#">Navbar</a>
     button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNavAltMarkup", aria-controls="navbarNavAltMarkup", aria-expanded="false", aria-label="Toggle navigation")
       span.navbar-toggler-icon
     div.collapse.navbar-collapse#navbarNavAltMarkup
@@ -8,3 +7,6 @@ nav#my-navbar.navbar.navbar-expand-lg.navbar-light
         a.nav-link(aria-current="page", href="/") About Me
         a.nav-link(href="https://rahulshah22.pythonanywhere.com/", target="_blank") Blogs
         a.nav-link(href="/my_projects") Projects
+    div.justify-content-end
+      button#scrollToContactFormButton.btn.btn-primary(type="button") Say hi!
+
