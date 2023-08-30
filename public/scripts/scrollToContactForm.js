@@ -11,18 +11,22 @@ contact_form.addEventListener('submit', function (e) {
   e.preventDefault();
   console.log("form submitted!");
   const contact_form_data = new FormData(contact_form);
-  // convert the data in URL encoded data 
-  const contact_data = new URLSearchParams(contact_form_data);
-  const payload = { data: {} };
-  for (const [key, value] of contact_data.entries()) {
-    payload.data.key = value;
+  const subPayload = {};
+  for (const pair of contact_form_data.entries()) {
+    subPayload[pair[0]] = pair[1];
   }
+  const payload = {};
+  // Manually append nested properties
+  payload.data = subPayload;
+  // convert the data in URL encoded data 
+  //const contact_data = new URLSearchParams(payload);
+
   const postFetchPromise = fetch("http://localhost:8000/api/email", {
     method: "POST",
     headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
+      "Content-Type": "application/json"
     },
-    body: payload
+    body: JSON.stringify(payload) // Serialize the object as JSON
   });
 
   postFetchPromise
@@ -30,10 +34,33 @@ contact_form.addEventListener('submit', function (e) {
       if (!response.ok) {
         throw new Error(`HTTP error: ${response.status}`);
       }
-      return response.text();
+      return response.json();
     })
-    .then(text => {
-      console.log("contact form msgs shown!");
+    .then(json => {
+      const contact_form_messages = document.getElementById("contact-from-msg-box");
+      let msgs = json.contact_form_msgs;
+      for (let msg of msgs) {
+        //create a div (or whatever wrapper we want)
+        let li = document.createElement("LI");
+
+        //set the content
+        li.innerText = msg;
+
+        if (msg === 'email sent!') {
+          li.classList.add("list-group-item", "list-group-item-success");
+        }
+        else {
+          li.classList.add("list-group-item", "list-group-item-danger");
+        }
+
+        //add the element to the DOM (if we don't it merely exists in memory)
+        contact_form_messages.appendChild(li);
+      }
+
+      // Reset the form after a delay
+      setTimeout(() => {
+        contact_form_messages.innerHTML = "";
+      }, 3000); // Hide the popup after 3 seconds
     })
     .catch(error => {
       console.log(`Could not render contact form msgs: ${error}`);
