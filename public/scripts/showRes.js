@@ -2,7 +2,7 @@ function populateResume(json) {
 	//a bunch of funcs
 	const showThem = function (key, json) {
 		//you have a list of objects
-		let myFlash = document.getElementsByClassName("container")[1];
+		let myFlash = document.getElementById("resume-box");
 		let cardDiv = document.createElement("div");
 		cardDiv.className = "card border-dark";
 		let cardBody1 = document.createElement("div");
@@ -34,7 +34,7 @@ function populateResume(json) {
 		myFlash.appendChild(colDiv);
 	};
 	const showSkills = function (key, json) {
-		let myFlash = document.getElementsByClassName("container")[1];
+		let myFlash = document.getElementById("resume-box");
 		let cardDiv = document.createElement("div");
 		cardDiv.className = "card border-dark";
 		let cardBody1 = document.createElement("div");
@@ -56,7 +56,7 @@ function populateResume(json) {
 	};
 	const showBasics = function (key, json) {
 		//make a bootstrap card here, and for card text, just sepearte each key-val pair with \n in the p element
-		let myFlash = document.getElementsByClassName("container")[1];
+		let myFlash = document.getElementById("resume-box");
 		let cardDiv = document.createElement("div");
 		cardDiv.className = "card border-dark";
 		let cardBody1 = document.createElement("div");
@@ -120,7 +120,7 @@ function showResume() {
 	});*/
 	const hideResume = function () {
 		document.querySelector(".btn-danger").removeEventListener("click", hideResume);
-		document.querySelectorAll(".container")[1].hidden = true;
+		document.getElementById("resume-box").hidden = true;
 		document.querySelector(".btn-danger").innerText = "Show Resume";
 		document.querySelector(".btn-danger").className = "btn btn-dark";
 		//console.log("hideResume called!");
@@ -128,7 +128,7 @@ function showResume() {
 	}
 	const unHideResume = function () {
 		document.querySelector(".btn-dark").removeEventListener("click", unHideResume);
-		document.querySelectorAll(".container")[1].hidden = false;
+		document.getElementById("resume-box").hidden = false;
 		document.querySelector(".btn-dark").innerText = "Hide Resume";
 		document.querySelector(".btn-dark").className = "btn btn-danger";
 		//console.log("unHideResume called!");
