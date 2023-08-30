@@ -13,7 +13,6 @@ const port = process.env.PORT || "8000";
 const { router } = require("./routes/index");
 const { ProjectPageError, CharacterCountExceeded} = require("./errors");
 
-
 /**
  *  App Configuration
  */
