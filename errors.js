@@ -19,5 +19,5 @@ class ProjectsInaccessibleError extends ProjectPageError {
 
 module.exports = {
     ProjectPageError,
-    ProjectsInaccesibleError
+    ProjectsInaccessibleError
 };
