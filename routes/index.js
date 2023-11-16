@@ -69,7 +69,7 @@ router.post('/api/email', function (req, res, next) {
         from: req.body.data.from,
         to: process.env.EMAIL,
         subject: req.body.data.subject,
-        text: req.body.data.text
+        text: `${req.body.data.text}\n\nFrom: ${req.body.data.first_name} ${req.body.data.last_name}`
     };
 
     nodemailerMailgun.sendMail(mailOpts, function (err, response) {
