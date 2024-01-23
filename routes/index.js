@@ -3,6 +3,8 @@ const router = express.Router();
 const { ProjectsInaccessibleError } = require('../errors');
 var nodemailer = require('nodemailer');
 const { validate } = require('jsonschema');
+// require the mail schema (a JSON file generated on jsonschema.net)
+const mailSchema = require('../public/json/mailSchema.json');
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
@@ -17,8 +19,6 @@ const config = {
 };
 
 var nodemailerMailgun = nodemailer.createTransport(config);
-// require the mail schema (a JSON file generated on jsonschema.net)
-const mailSchema = require('../public/json/mailSchema.json');
 
 router.get('/', (req, res) => {
     res.render("index");
@@ -69,7 +69,7 @@ router.post('/api/email', function (req, res, next) {
         from: req.body.data.from,
         to: process.env.EMAIL,
         subject: req.body.data.subject,
-        text: req.body.data.text
+        text: `${req.body.data.text}\n\nFrom: ${req.body.data.first_name} ${req.body.data.last_name}`
     };
 
     nodemailerMailgun.sendMail(mailOpts, function (err, response) {
