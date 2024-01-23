@@ -41,7 +41,7 @@ app.use((err, req, res, next) => {
     {
         for(let error of err)
         {
-            console.error('\x1b[31m', err); // adding some color to our logs
+            console.error('\x1b[31m', error); // adding some color to our logs
         }
     }
     else
