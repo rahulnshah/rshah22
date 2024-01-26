@@ -1,33 +1,39 @@
-.app-root 
-{
+.app-root {
 
 	min-height: 100%;
-	
+
 	display: block;
-	
+
 	position: relative;
-	
-	padding-bottom: 100px; 
-	
+
+	padding-bottom: 100px;
+
 }
-.space
-{
+
+.space {
 	width: 4px;
 	height: auto;
 	display: inline-block;
-}	
-footer 
-{
-	
-	position: absolute;
-	
-	bottom: 0;
-	
-	width: 100%;
-	
 }
-.mx-auto
-{
+
+footer {
+
+	position: absolute;
+
+	bottom: 0;
+
+	width: 100%;
+
+}
+
+.mx-auto {
 	width: 35%;
 }
 
+.custom-card {
+	height: 100%;
+}
+
+.custom-card-body {
+	height: 100%;
+}
