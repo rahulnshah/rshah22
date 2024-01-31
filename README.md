@@ -1,4 +1,4 @@
-# Heroku Setup
+# Heroku Setu
 
 - 08/30/2021 removed .htaccess and updated Procfile to use public_html as docroot
 - Profile tells Heroku how to deploy
