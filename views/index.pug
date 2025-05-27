@@ -2,15 +2,23 @@ extends layout
 
 block layout-content
     h3 Welcome!
-    p I am Rahul. I am a rising senior #[b Honors Computer Science] student at the #[b New Jersey Institute of Technology].  I enjoy building elegant software through programming. My interests lie in Web Development, Decentralized Applications (DApps), and DevOps. In my spare time, I like to read books or play volleyball with my friends.  On this homepage, you can find links to my personal projects and blog posts.  Feel free to explore!
-    p If you have any questions or any suggestions about movies, games, or just want to say "Hello!", you can reach me at #[a.text-decoration-none(href="mailto:rahulnshah24@gmail.com") rahulnshah24@gmail.com]
+    p 
+        | Hey there! I'm a Software Engineer who loves turning ideas into code. I graduated
+        | with a Bachelor's Degree in Computer Science from the New Jersey Institute of Technology.
+        | My work focuses on web development, mobile apps, and machine learning. Outside of coding, 
+        | you'll find me at the movies with friends, playing basketball, or hitting the gym.
+
+    p 
+        | Want to connect? Reach out at 
+        a.text-decoration-none(href="mailto:rahulnshah24@gmail.com") rahulnshah24@gmail.com
+
     div.col-md-12.text-center
         button.btn.btn-dark(type="button") Show Resume
     br
     p#demo
     div#resume-box
     br
-    h4.text-center Data Structures I Used For This Site
+    h4.text-center Core Data Structures and Algorithms Behind the Code
     ul
         li
             h5 Map
