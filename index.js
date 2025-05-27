@@ -30,54 +30,47 @@ app.use(router);
 
 // catch 404 and forward to next error handler, which is the error logger
 app.use((req, res, next) => {
-    const err = new Error("Not Found");
-    err.status = 404;
-    next(err);
+  const err = new Error("Not Found");
+  err.status = 404;
+  next(err);
 });
 
 // error logger
 app.use((err, req, res, next) => {
-    if (Array.isArray(err)) 
-    {
-        for(let error of err)
-        {
-            console.error('\x1b[31m', error); // adding some color to our logs
-        }
+  if (Array.isArray(err)) {
+    for (let error of err) {
+      console.error("\x1b[31m", error); // adding some color to our logs
     }
-    else
-    {
-        console.error('\x1b[31m', err); // adding some color to our logs
-    }
-    next(err); // calling next middleware
+  } else {
+    console.error("\x1b[31m", err); // adding some color to our logs
+  }
+  next(err); // calling next middleware
 });
 
-// error responder 
+// error responder
 app.use((err, req, res, next) => {
-    res.status(err.status || 500);
-    if (Array.isArray(err)) {
-        // If the error is an array of errors, handle validation errors
-        return res.json({ errors : err });
+  res.status(err.status || 500);
+  if (Array.isArray(err)) {
+    // If the error is an array of errors, handle validation errors
+    return res.json({ errors: err });
+  } else {
+    if (err.status == 404) {
+      res.render("404_page", { h1_text: err.message, err_status: err.status });
+    } else if (err instanceof ProjectPageError) {
+      if (err.type === "project details") {
+        res.render("index", { all_projects: [] });
+      }
+    } else {
+      return res.json({
+        error: err.message,
+      });
     }
-    else {
-        if (err.status == 404) {
-            res.render("404_page", { h1_text: err.message, err_status: err.status });
-        }
-        else if (err instanceof ProjectPageError) {
-            if (err.type === "project details") {
-                res.render("my_projects", { h1_text: "Projects", all_projects: [] });
-            }
-        }
-        else {
-            return res.json({
-                error : err.message
-            });
-        }
-    }
+  }
 });
 
 /**
  * Server Activation
  */
 app.listen(port, () => {
-    console.log(`Listening to requests on http://localhost:${port}`);
+  console.log(`Listening to requests on http://localhost:${port}`);
 });

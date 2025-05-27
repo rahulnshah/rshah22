@@ -1,4 +1,5 @@
 extends layout
+include components/projects
 
 block layout-content
     h3 Welcome!
@@ -17,19 +18,6 @@ block layout-content
     br
     p#demo
     div#resume-box
-    br
-    h4.text-center Core Data Structures and Algorithms Behind the Code
-    ul
-        li
-            h5 Map
-    script(src="https://gist.github.com/rahulnshah/b9e90e32eb71912fdcaf50316d0b46b3.js")
-    ul
-        li
-            h5 Array
-    script(src="https://gist.github.com/rahulnshah/05e2729fee3b22c2054dc3013934632f.js")
-    ul
-        li
-            h5 Stack
-    script(src="https://gist.github.com/rahulnshah/f910299bcad4a1717e4e67e2b42fff52.js")
+    +projects(all_projects)
     
     script(src="scripts/showRes.js")
