@@ -1,6 +1,7 @@
 doctype html
 html
   head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Rahul Shah
     include includes/icon.pug
     link(rel="stylesheet", type="text/css", href="css/portfolio.css")
@@ -29,9 +30,24 @@ html
       ul#contact-from-msg-box.list-group
       h4.text-center(class="contact-form-header") Contact Form
       form#contact-form(action="#" method='post')
-        .input-group.mb-3
-            input.form-control(id="first_name" type="text" name="first_name" placeholder="First Name" required)
-            input.form-control(id="last_name" type="text" name="last_name" placeholder="Last Name" required)
+        .mb-3
+            label.form-label(for="first_name") First Name
+            input.form-control(
+                id="first_name" 
+                type="text" 
+                name="first_name" 
+                placeholder="First Name" 
+                required
+            )
+        .mb-3
+            label.form-label(for="last_name") Last Name
+            input.form-control(
+                id="last_name" 
+                type="text" 
+                name="last_name" 
+                placeholder="Last Name" 
+                required
+            )
         .mb-3
             label.form-label(for="email") From
             input.form-control(type="email" name="from" id="email" placeholder="name@example.com" required)
