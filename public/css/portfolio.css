@@ -37,9 +37,10 @@ footer {
 }
 
 .custom-card {
-	height: 100%;
+	height: auto;
+	margin-bottom: 1rem;
 }
 
 .custom-card-body {
-	height: 100%;
+	height: auto;
 }
